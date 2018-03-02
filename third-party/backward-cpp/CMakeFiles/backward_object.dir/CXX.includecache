@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/third-party/backward-cpp/backward.cpp
+/home/antonloskutov/project_c/afina/third-party/backward-cpp/backward.cpp
 backward.hpp
-/home/anton/Documents/afina/third-party/backward-cpp/backward.hpp
+/home/antonloskutov/project_c/afina/third-party/backward-cpp/backward.hpp
 
-/home/anton/Documents/afina/third-party/backward-cpp/backward.hpp
+/home/antonloskutov/project_c/afina/third-party/backward-cpp/backward.hpp
 fstream
 -
 iostream

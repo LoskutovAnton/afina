@@ -61,16 +61,16 @@ pad_space(const std::string &s, size_t length)
 
 TEST(StorageTest, BigTest) {
     const size_t length = 20;
-    MapBasedGlobalLockImpl storage(2 * 10000 * length);
+    MapBasedGlobalLockImpl storage(2 * 100000 * length);
 
-    for(long i=0; i<10000; ++i)
+    for(long i=0; i<100000; ++i)
     {
         auto key = pad_space("Key " + std::to_string(i), length);
         auto val = pad_space("Val " + std::to_string(i), length);
         storage.Put(key, val);
     }
 
-    for(long i=9999; i>=0; --i)
+    for(long i=99999; i>=0; --i)
     {
         auto key = pad_space("Key " + std::to_string(i), length);
         auto val = pad_space("Val " + std::to_string(i), length);
@@ -85,7 +85,7 @@ TEST(StorageTest, BigTest) {
 
 TEST(StorageTest, MaxTest) {
     const size_t length = 20;
-    MapBasedGlobalLockImpl storage(1000 * length);
+    MapBasedGlobalLockImpl storage(2 * 1000 * length);
 
     std::stringstream ss;
 
@@ -107,12 +107,11 @@ TEST(StorageTest, MaxTest) {
         EXPECT_TRUE(val == res);
     }
 
-    for(long i=0; i<1600; ++i)
+    for(long i=0; i<100; ++i)
     {
         auto key = pad_space("Key " + std::to_string(i), length);
 
         std::string res;
         EXPECT_FALSE(storage.Get(key, res));
-        std::cout << key << res << std::endl;
     }
 }

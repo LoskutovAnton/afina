@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/depend.make
@@ -59,16 +59,16 @@ include third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/fla
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/flags.make
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o: third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o"
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o -c /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i"
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc > CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc > CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.i
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s"
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc -o CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.s
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googletest/src/gtest-all.cc.o.requires:
 
@@ -83,16 +83,16 @@ third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/__/googlete
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/flags.make
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gmock.dir/src/gmock-all.cc.i"
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc > CMakeFiles/gmock.dir/src/gmock-all.cc.i
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc > CMakeFiles/gmock.dir/src/gmock-all.cc.i
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gmock.dir/src/gmock-all.cc.s"
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc -o CMakeFiles/gmock.dir/src/gmock-all.cc.s
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.requires:
 
@@ -117,9 +117,9 @@ third-party/googletest-release-1.8.0/googlemock/libgmock.a: third-party/googlete
 third-party/googletest-release-1.8.0/googlemock/libgmock.a: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o
 third-party/googletest-release-1.8.0/googlemock/libgmock.a: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make
 third-party/googletest-release-1.8.0/googlemock/libgmock.a: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libgmock.a"
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean_target.cmake
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libgmock.a"
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean_target.cmake
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gmock.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build: third-party/googletest-release-1.8.0/googlemock/libgmock.a
@@ -132,10 +132,10 @@ third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/requires: t
 .PHONY : third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/requires
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/clean:
-	cd /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock && $(CMAKE_COMMAND) -P CMakeFiles/gmock.dir/cmake_clean.cmake
 .PHONY : third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/clean
 
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock /home/anton/Documents/afina /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock /home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/depend
 

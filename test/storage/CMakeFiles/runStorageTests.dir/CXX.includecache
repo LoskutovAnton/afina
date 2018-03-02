@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/test/storage/StorageTest.cpp
+/home/antonloskutov/project_c/afina/test/storage/StorageTest.cpp
 gtest/gtest.h
-/home/anton/Documents/afina/test/storage/gtest/gtest.h
+/home/antonloskutov/project_c/afina/test/storage/gtest/gtest.h
 iostream
 -
 set
@@ -83,7 +83,7 @@ InsertCommand.h
 include/afina/execute/InsertCommand.h
 
 src/storage/MapBasedGlobalLockImpl.h
-map
+unordered_map
 -
 mutex
 -

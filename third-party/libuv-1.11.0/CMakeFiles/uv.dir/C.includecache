@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/fs-poll.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/fs-poll.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv.h
 uv-common.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.h
 assert.h
 -
 stdlib.h
@@ -18,45 +18,45 @@ stdlib.h
 string.h
 -
 win/internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/internal.h
 win/handle-inl.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/handle-inl.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/handle-inl.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/inet.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/inet.c
 stdio.h
 -
 string.h
 -
 stdint-msvc2008.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/stdint-msvc2008.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/stdint-msvc2008.h
 stdint.h
 -
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv.h
 uv-common.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/queue.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/queue.h
 stddef.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/threadpool.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/threadpool.c
 uv-common.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.h
 unix/internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 win/req-inl.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/req-inl.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/req-inl.h
 stdlib.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/async.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/async.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 atomic-ops.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/atomic-ops.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/atomic-ops.h
 errno.h
 -
 stdio.h
@@ -70,17 +70,17 @@ string.h
 unistd.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/atomic-ops.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/atomic-ops.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 atomic.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/core.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/core.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 stddef.h
 -
 stdio.h
@@ -140,11 +140,11 @@ dlfcn.h
 sys/ioctl.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/dl.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/dl.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 dlfcn.h
 -
 errno.h
@@ -154,11 +154,11 @@ string.h
 locale.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/fs.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/fs.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 errno.h
 -
 stdio.h
@@ -192,11 +192,11 @@ poll.h
 sys/sendfile.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 errno.h
 -
 stddef.h
@@ -208,7 +208,7 @@ string.h
 netdb.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c
 assert.h
 -
 stdlib.h
@@ -218,13 +218,13 @@ stdio.h
 string.h
 -
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 uv-common.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv-common.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv-common.h
 assert.h
 -
 stdlib.h
@@ -236,9 +236,9 @@ fcntl.h
 stdio.h
 -
 linux-syscalls.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.h
 os390-syscalls.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/os390-syscalls.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/os390-syscalls.h
 sys/port.h
 -
 port.h
@@ -250,11 +250,11 @@ poll.h
 AvailabilityMacros.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-core.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-core.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 stdint.h
 -
 stdio.h
@@ -282,7 +282,7 @@ fcntl.h
 time.h
 -
 android-ifaddrs.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/android-ifaddrs.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/android-ifaddrs.h
 ifaddrs.h
 -
 sys/socket.h
@@ -292,13 +292,13 @@ net/ethernet.h
 netpacket/packet.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 tree.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tree.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tree.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 stdint.h
 -
 stdio.h
@@ -316,9 +316,9 @@ sys/types.h
 unistd.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c
 linux-syscalls.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.h
 unistd.h
 -
 signal.h
@@ -332,7 +332,7 @@ errno.h
 sanitizer/msan_interface.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.h
 stdint.h
 -
 signal.h
@@ -344,21 +344,21 @@ sys/time.h
 sys/socket.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 tree.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tree.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tree.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 heap-inl.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/heap-inl.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/heap-inl.h
 stdlib.h
 -
 string.h
@@ -366,11 +366,11 @@ string.h
 unistd.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/os390-syscalls.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/os390-syscalls.h
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 dirent.h
 -
 poll.h
@@ -378,11 +378,11 @@ poll.h
 pthread.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/pipe.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/pipe.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 assert.h
 -
 errno.h
@@ -396,11 +396,11 @@ unistd.h
 stdlib.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/poll.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/poll.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 unistd.h
 -
 assert.h
@@ -408,11 +408,11 @@ assert.h
 errno.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/process.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/process.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 stdio.h
 -
 stdlib.h
@@ -436,11 +436,11 @@ crt_externs.h
 grp.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/signal.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/signal.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 assert.h
 -
 errno.h
@@ -454,17 +454,17 @@ string.h
 unistd.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/spinlock.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/spinlock.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 atomic-ops.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/atomic-ops.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/atomic-ops.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/stream.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/stream.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 stdio.h
 -
 stdlib.h
@@ -494,11 +494,11 @@ sys/time.h
 sys/select.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tcp.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tcp.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 stdlib.h
 -
 unistd.h
@@ -508,11 +508,11 @@ assert.h
 errno.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/thread.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/thread.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 pthread.h
 -
 assert.h
@@ -532,25 +532,25 @@ sys/ipc.h
 sys/sem.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/timer.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/timer.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 heap-inl.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/heap-inl.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/heap-inl.h
 assert.h
 -
 limits.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tty.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tty.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 spinlock.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/spinlock.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/spinlock.h
 stdlib.h
 -
 assert.h
@@ -564,11 +564,11 @@ errno.h
 sys/ioctl.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/udp.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/udp.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/internal.h
 assert.h
 -
 string.h
@@ -582,11 +582,11 @@ unistd.h
 xti.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv.h
 uv-common.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.h
 assert.h
 -
 errno.h
@@ -606,7 +606,7 @@ malloc.h
 net/if.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.h
 assert.h
 -
 stdarg.h
@@ -614,55 +614,55 @@ stdarg.h
 stddef.h
 -
 stdint-msvc2008.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/stdint-msvc2008.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/stdint-msvc2008.h
 stdint.h
 -
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv.h
 tree.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/tree.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/tree.h
 queue.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/queue.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/queue.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/version.c
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/version.c
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/handle-inl.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/handle-inl.h
 assert.h
 -
 io.h
 -
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/internal.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/internal.h
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/uv.h
 ../uv-common.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.h
 tree.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/tree.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/tree.h
 winapi.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/winapi.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/winapi.h
 winsock.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/winsock.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/winsock.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/req-inl.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/req-inl.h
 assert.h
 -
 uv.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/uv.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/uv.h
 internal.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/internal.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/internal.h
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/winapi.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/winapi.h
 windows.h
 -
 
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/winsock.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/winsock.h
 winsock2.h
 -
 iptypes.h
@@ -674,7 +674,7 @@ ws2tcpip.h
 windows.h
 -
 winapi.h
-/home/anton/Documents/afina/third-party/libuv-1.11.0/src/win/winapi.h
+/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/win/winapi.h
 
 third-party/libuv-1.11.0/include/android-ifaddrs.h
 sys/cdefs.h

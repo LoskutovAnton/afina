@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton/Documents/afina/src/protocol/Parser.cpp" "/home/anton/Documents/afina/src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/protocol/Parser.cpp" "/home/antonloskutov/project_c/afina/src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -16,8 +16,8 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/DependInfo.cmake"
-  "/home/anton/Documents/afina/src/storage/CMakeFiles/Storage.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/storage/CMakeFiles/Storage.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

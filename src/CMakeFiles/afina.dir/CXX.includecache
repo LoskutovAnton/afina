@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/src/Version.cpp
+/home/antonloskutov/project_c/afina/src/Version.cpp
 afina/Version.h
 -
 string
 -
 
-/home/anton/Documents/afina/src/main.cpp
+/home/antonloskutov/project_c/afina/src/main.cpp
 chrono
 -
 iostream
@@ -30,15 +30,15 @@ afina/Version.h
 afina/network/Server.h
 -
 network/blocking/ServerImpl.h
-/home/anton/Documents/afina/src/network/blocking/ServerImpl.h
+/home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.h
 network/nonblocking/ServerImpl.h
-/home/anton/Documents/afina/src/network/nonblocking/ServerImpl.h
+/home/antonloskutov/project_c/afina/src/network/nonblocking/ServerImpl.h
 network/uv/ServerImpl.h
-/home/anton/Documents/afina/src/network/uv/ServerImpl.h
+/home/antonloskutov/project_c/afina/src/network/uv/ServerImpl.h
 storage/MapBasedGlobalLockImpl.h
-/home/anton/Documents/afina/src/storage/MapBasedGlobalLockImpl.h
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.h
 
-/home/anton/Documents/afina/src/network/blocking/ServerImpl.h
+/home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.h
 atomic
 -
 condition_variable
@@ -52,13 +52,13 @@ unordered_set
 afina/network/Server.h
 -
 
-/home/anton/Documents/afina/src/network/nonblocking/ServerImpl.h
+/home/antonloskutov/project_c/afina/src/network/nonblocking/ServerImpl.h
 vector
 -
 afina/network/Server.h
 -
 
-/home/anton/Documents/afina/src/network/uv/ServerImpl.h
+/home/antonloskutov/project_c/afina/src/network/uv/ServerImpl.h
 memory
 -
 vector
@@ -66,9 +66,9 @@ vector
 afina/network/Server.h
 -
 Worker.h
-/home/anton/Documents/afina/src/network/uv/Worker.h
+/home/antonloskutov/project_c/afina/src/network/uv/Worker.h
 
-/home/anton/Documents/afina/src/network/uv/Worker.h
+/home/antonloskutov/project_c/afina/src/network/uv/Worker.h
 string
 -
 unordered_set
@@ -82,8 +82,8 @@ afina/execute/Command.h
 protocol/Parser.h
 -
 
-/home/anton/Documents/afina/src/storage/MapBasedGlobalLockImpl.h
-map
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.h
+unordered_map
 -
 mutex
 -

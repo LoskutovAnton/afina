@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton/Documents/afina/src/storage/MapBasedGlobalLockImpl.cpp" "/home/anton/Documents/afina/src/storage/CMakeFiles/Storage.dir/MapBasedGlobalLockImpl.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.cpp" "/home/antonloskutov/project_c/afina/src/storage/CMakeFiles/Storage.dir/MapBasedGlobalLockImpl.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

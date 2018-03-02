@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,17 +78,6 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -99,6 +88,28 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # Special rule for the target test
 test:
@@ -124,14 +135,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles /home/anton/Documents/afina/third-party/googletest-release-1.8.0/CMakeFiles/progress.marks
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles /home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/CMakeFiles/progress.marks
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/clean
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,17 +152,17 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Help Target
@@ -162,8 +173,9 @@ help:
 	@echo "... depend"
 	@echo "... list_install_components"
 	@echo "... install"
-	@echo "... install/local"
 	@echo "... rebuild_cache"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... test"
 	@echo "... edit_cache"
 .PHONY : help
@@ -177,6 +189,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

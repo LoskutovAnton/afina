@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/src/protocol/Parser.cpp
+/home/antonloskutov/project_c/afina/src/protocol/Parser.cpp
 Parser.h
-/home/anton/Documents/afina/src/protocol/Parser.h
+/home/antonloskutov/project_c/afina/src/protocol/Parser.h
 iostream
 -
 sstream
@@ -30,7 +30,7 @@ afina/execute/Set.h
 afina/execute/Stats.h
 -
 
-/home/anton/Documents/afina/src/protocol/Parser.h
+/home/antonloskutov/project_c/afina/src/protocol/Parser.h
 memory
 -
 string

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton/Documents/afina/test/coroutine/EngineTest.cpp" "/home/anton/Documents/afina/test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o"
+  "/home/antonloskutov/project_c/afina/test/coroutine/EngineTest.cpp" "/home/antonloskutov/project_c/afina/test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -26,9 +26,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anton/Documents/afina/src/coroutine/CMakeFiles/Coroutine.dir/DependInfo.cmake"
-  "/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
-  "/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/coroutine/CMakeFiles/Coroutine.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

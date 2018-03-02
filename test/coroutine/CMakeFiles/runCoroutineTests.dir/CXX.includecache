@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/test/coroutine/EngineTest.cpp
+/home/antonloskutov/project_c/afina/test/coroutine/EngineTest.cpp
 gtest/gtest.h
-/home/anton/Documents/afina/test/coroutine/gtest/gtest.h
+/home/antonloskutov/project_c/afina/test/coroutine/gtest/gtest.h
 iostream
 -
 sstream

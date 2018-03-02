@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -89,6 +89,28 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -111,27 +133,16 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles /home/anton/Documents/afina/src/protocol/CMakeFiles/progress.marks
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles /home/antonloskutov/project_c/afina/src/protocol/CMakeFiles/progress.marks
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/clean
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/protocol/CMakeFiles/Protocol.dir/rule:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/CMakeFiles/Protocol.dir/rule
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/protocol/CMakeFiles/Protocol.dir/rule
 .PHONY : src/protocol/CMakeFiles/Protocol.dir/rule
 
 # Convenience name for target.
@@ -166,7 +177,7 @@ Protocol: src/protocol/CMakeFiles/Protocol.dir/rule
 
 # fast build rule for target.
 Protocol/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/build
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/build
 .PHONY : Protocol/fast
 
 Parser.o: Parser.cpp.o
@@ -175,7 +186,7 @@ Parser.o: Parser.cpp.o
 
 # target to build an object file
 Parser.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.o
 .PHONY : Parser.cpp.o
 
 Parser.i: Parser.cpp.i
@@ -184,7 +195,7 @@ Parser.i: Parser.cpp.i
 
 # target to preprocess a source file
 Parser.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.i
 .PHONY : Parser.cpp.i
 
 Parser.s: Parser.cpp.s
@@ -193,7 +204,7 @@ Parser.s: Parser.cpp.s
 
 # target to generate assembly for a file
 Parser.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/Parser.cpp.s
 .PHONY : Parser.cpp.s
 
 # Help Target
@@ -205,10 +216,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... Protocol"
+	@echo "... install/strip"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... edit_cache"
 	@echo "... Parser.o"
 	@echo "... Parser.i"
 	@echo "... Parser.s"
@@ -223,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

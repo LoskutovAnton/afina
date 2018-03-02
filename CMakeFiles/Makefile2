@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 #=============================================================================
 # Directory level rules for directory third-party/googletest-release-1.8.0
@@ -106,7 +106,7 @@ third-party/googletest-release-1.8.0/googlemock/preinstall: third-party/googlete
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=31,32,33 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=31,32,33 "Built target gmock"
 .PHONY : third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/all
 
 # Include target in all.
@@ -116,9 +116,9 @@ all: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/rule
 
 # Convenience name for target.
@@ -143,7 +143,7 @@ clean: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/clea
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=34,35,36,37 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=34,35,36,37 "Built target gmock_main"
 .PHONY : third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Include target in all.
@@ -153,9 +153,9 @@ all: third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/a
 
 # Build rule for subdir invocation for target.
 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : third-party/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/rule
 
 # Convenience name for target.
@@ -200,7 +200,7 @@ third-party/googletest-release-1.8.0/googlemock/gtest/preinstall:
 third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=38,39 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=38,39 "Built target gtest"
 .PHONY : third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Include target in all.
@@ -210,9 +210,9 @@ all: third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/
 
 # Build rule for subdir invocation for target.
 third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/rule
 
 # Convenience name for target.
@@ -237,7 +237,7 @@ clean: third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.di
 third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/all: third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=40,41 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=40,41 "Built target gtest_main"
 .PHONY : third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Include target in all.
@@ -247,9 +247,9 @@ all: third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main
 
 # Build rule for subdir invocation for target.
 third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : third-party/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
 
 # Convenience name for target.
@@ -292,7 +292,7 @@ third-party/libuv-1.11.0/preinstall:
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/all:
 	$(MAKE) -f third-party/libuv-1.11.0/CMakeFiles/uv.dir/build.make third-party/libuv-1.11.0/CMakeFiles/uv.dir/depend
 	$(MAKE) -f third-party/libuv-1.11.0/CMakeFiles/uv.dir/build.make third-party/libuv-1.11.0/CMakeFiles/uv.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target uv"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78 "Built target uv"
 .PHONY : third-party/libuv-1.11.0/CMakeFiles/uv.dir/all
 
 # Include target in all.
@@ -302,9 +302,9 @@ all: third-party/libuv-1.11.0/CMakeFiles/uv.dir/all
 
 # Build rule for subdir invocation for target.
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 27
 	$(MAKE) -f CMakeFiles/Makefile2 third-party/libuv-1.11.0/CMakeFiles/uv.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : third-party/libuv-1.11.0/CMakeFiles/uv.dir/rule
 
 # Convenience name for target.
@@ -349,7 +349,7 @@ third-party/backward-cpp/preinstall:
 third-party/backward-cpp/CMakeFiles/backward_object.dir/all:
 	$(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/depend
 	$(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=30 "Built target backward_object"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=30 "Built target backward_object"
 .PHONY : third-party/backward-cpp/CMakeFiles/backward_object.dir/all
 
 # Include target in all.
@@ -359,9 +359,9 @@ all: third-party/backward-cpp/CMakeFiles/backward_object.dir/all
 
 # Build rule for subdir invocation for target.
 third-party/backward-cpp/CMakeFiles/backward_object.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 1
 	$(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/CMakeFiles/backward_object.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : third-party/backward-cpp/CMakeFiles/backward_object.dir/rule
 
 # Convenience name for target.
@@ -386,7 +386,7 @@ clean: third-party/backward-cpp/CMakeFiles/backward_object.dir/clean
 third-party/backward-cpp/CMakeFiles/backward.dir/all:
 	$(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/depend
 	$(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=28,29 "Built target backward"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=28,29 "Built target backward"
 .PHONY : third-party/backward-cpp/CMakeFiles/backward.dir/all
 
 # Include target in all.
@@ -396,9 +396,9 @@ all: third-party/backward-cpp/CMakeFiles/backward.dir/all
 
 # Build rule for subdir invocation for target.
 third-party/backward-cpp/CMakeFiles/backward.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/CMakeFiles/backward.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : third-party/backward-cpp/CMakeFiles/backward.dir/rule
 
 # Convenience name for target.
@@ -520,7 +520,7 @@ src/CMakeFiles/afina.dir/all: src/network/CMakeFiles/Network.dir/all
 src/CMakeFiles/afina.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f src/CMakeFiles/afina.dir/build.make src/CMakeFiles/afina.dir/depend
 	$(MAKE) -f src/CMakeFiles/afina.dir/build.make src/CMakeFiles/afina.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=25,26,27 "Built target afina"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=25,26,27 "Built target afina"
 .PHONY : src/CMakeFiles/afina.dir/all
 
 # Include target in all.
@@ -530,9 +530,9 @@ all: src/CMakeFiles/afina.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/afina.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 50
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 50
 	$(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/afina.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : src/CMakeFiles/afina.dir/rule
 
 # Convenience name for target.
@@ -575,7 +575,7 @@ src/allocator/preinstall:
 src/allocator/CMakeFiles/Allocator.dir/all:
 	$(MAKE) -f src/allocator/CMakeFiles/Allocator.dir/build.make src/allocator/CMakeFiles/Allocator.dir/depend
 	$(MAKE) -f src/allocator/CMakeFiles/Allocator.dir/build.make src/allocator/CMakeFiles/Allocator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=1,2,3 "Built target Allocator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=1,2,3 "Built target Allocator"
 .PHONY : src/allocator/CMakeFiles/Allocator.dir/all
 
 # Include target in all.
@@ -585,9 +585,9 @@ all: src/allocator/CMakeFiles/Allocator.dir/all
 
 # Build rule for subdir invocation for target.
 src/allocator/CMakeFiles/Allocator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 src/allocator/CMakeFiles/Allocator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : src/allocator/CMakeFiles/Allocator.dir/rule
 
 # Convenience name for target.
@@ -630,7 +630,7 @@ src/coroutine/preinstall:
 src/coroutine/CMakeFiles/Coroutine.dir/all:
 	$(MAKE) -f src/coroutine/CMakeFiles/Coroutine.dir/build.make src/coroutine/CMakeFiles/Coroutine.dir/depend
 	$(MAKE) -f src/coroutine/CMakeFiles/Coroutine.dir/build.make src/coroutine/CMakeFiles/Coroutine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=4,5 "Built target Coroutine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=4,5 "Built target Coroutine"
 .PHONY : src/coroutine/CMakeFiles/Coroutine.dir/all
 
 # Include target in all.
@@ -640,9 +640,9 @@ all: src/coroutine/CMakeFiles/Coroutine.dir/all
 
 # Build rule for subdir invocation for target.
 src/coroutine/CMakeFiles/Coroutine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/coroutine/CMakeFiles/Coroutine.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : src/coroutine/CMakeFiles/Coroutine.dir/rule
 
 # Convenience name for target.
@@ -685,7 +685,7 @@ src/execute/preinstall:
 src/execute/CMakeFiles/Execute.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/depend
 	$(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=6,7,8,9,10,11,12,13 "Built target Execute"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=6,7,8,9,10,11,12,13 "Built target Execute"
 .PHONY : src/execute/CMakeFiles/Execute.dir/all
 
 # Include target in all.
@@ -695,9 +695,9 @@ all: src/execute/CMakeFiles/Execute.dir/all
 
 # Build rule for subdir invocation for target.
 src/execute/CMakeFiles/Execute.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 src/execute/CMakeFiles/Execute.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : src/execute/CMakeFiles/Execute.dir/rule
 
 # Convenience name for target.
@@ -741,7 +741,7 @@ src/protocol/CMakeFiles/Protocol.dir/all: src/execute/CMakeFiles/Execute.dir/all
 src/protocol/CMakeFiles/Protocol.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/depend
 	$(MAKE) -f src/protocol/CMakeFiles/Protocol.dir/build.make src/protocol/CMakeFiles/Protocol.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=21,22 "Built target Protocol"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=21,22 "Built target Protocol"
 .PHONY : src/protocol/CMakeFiles/Protocol.dir/all
 
 # Include target in all.
@@ -751,9 +751,9 @@ all: src/protocol/CMakeFiles/Protocol.dir/all
 
 # Build rule for subdir invocation for target.
 src/protocol/CMakeFiles/Protocol.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 src/protocol/CMakeFiles/Protocol.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : src/protocol/CMakeFiles/Protocol.dir/rule
 
 # Convenience name for target.
@@ -799,7 +799,7 @@ src/network/CMakeFiles/Network.dir/all: src/protocol/CMakeFiles/Protocol.dir/all
 src/network/CMakeFiles/Network.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f src/network/CMakeFiles/Network.dir/build.make src/network/CMakeFiles/Network.dir/depend
 	$(MAKE) -f src/network/CMakeFiles/Network.dir/build.make src/network/CMakeFiles/Network.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=14,15,16,17,18,19,20 "Built target Network"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=14,15,16,17,18,19,20 "Built target Network"
 .PHONY : src/network/CMakeFiles/Network.dir/all
 
 # Include target in all.
@@ -809,9 +809,9 @@ all: src/network/CMakeFiles/Network.dir/all
 
 # Build rule for subdir invocation for target.
 src/network/CMakeFiles/Network.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 46
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 46
 	$(MAKE) -f CMakeFiles/Makefile2 src/network/CMakeFiles/Network.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : src/network/CMakeFiles/Network.dir/rule
 
 # Convenience name for target.
@@ -854,7 +854,7 @@ src/storage/preinstall:
 src/storage/CMakeFiles/Storage.dir/all:
 	$(MAKE) -f src/storage/CMakeFiles/Storage.dir/build.make src/storage/CMakeFiles/Storage.dir/depend
 	$(MAKE) -f src/storage/CMakeFiles/Storage.dir/build.make src/storage/CMakeFiles/Storage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=23,24 "Built target Storage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=23,24 "Built target Storage"
 .PHONY : src/storage/CMakeFiles/Storage.dir/all
 
 # Include target in all.
@@ -864,9 +864,9 @@ all: src/storage/CMakeFiles/Storage.dir/all
 
 # Build rule for subdir invocation for target.
 src/storage/CMakeFiles/Storage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 src/storage/CMakeFiles/Storage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : src/storage/CMakeFiles/Storage.dir/rule
 
 # Convenience name for target.
@@ -945,7 +945,7 @@ test/allocator/CMakeFiles/runAllocatorTests.dir/all: third-party/backward-cpp/CM
 test/allocator/CMakeFiles/runAllocatorTests.dir/all: src/allocator/CMakeFiles/Allocator.dir/all
 	$(MAKE) -f test/allocator/CMakeFiles/runAllocatorTests.dir/build.make test/allocator/CMakeFiles/runAllocatorTests.dir/depend
 	$(MAKE) -f test/allocator/CMakeFiles/runAllocatorTests.dir/build.make test/allocator/CMakeFiles/runAllocatorTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=42,43 "Built target runAllocatorTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=42,43 "Built target runAllocatorTests"
 .PHONY : test/allocator/CMakeFiles/runAllocatorTests.dir/all
 
 # Include target in all.
@@ -955,9 +955,9 @@ all: test/allocator/CMakeFiles/runAllocatorTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/allocator/CMakeFiles/runAllocatorTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 test/allocator/CMakeFiles/runAllocatorTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : test/allocator/CMakeFiles/runAllocatorTests.dir/rule
 
 # Convenience name for target.
@@ -1003,7 +1003,7 @@ test/coroutine/CMakeFiles/runCoroutineTests.dir/all: third-party/backward-cpp/CM
 test/coroutine/CMakeFiles/runCoroutineTests.dir/all: src/coroutine/CMakeFiles/Coroutine.dir/all
 	$(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/depend
 	$(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=44,45 "Built target runCoroutineTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=44,45 "Built target runCoroutineTests"
 .PHONY : test/coroutine/CMakeFiles/runCoroutineTests.dir/all
 
 # Include target in all.
@@ -1013,9 +1013,9 @@ all: test/coroutine/CMakeFiles/runCoroutineTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/coroutine/CMakeFiles/runCoroutineTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 test/coroutine/CMakeFiles/runCoroutineTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : test/coroutine/CMakeFiles/runCoroutineTests.dir/rule
 
 # Convenience name for target.
@@ -1063,7 +1063,7 @@ test/execute/CMakeFiles/runExecuteTests.dir/all: src/execute/CMakeFiles/Execute.
 test/execute/CMakeFiles/runExecuteTests.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f test/execute/CMakeFiles/runExecuteTests.dir/build.make test/execute/CMakeFiles/runExecuteTests.dir/depend
 	$(MAKE) -f test/execute/CMakeFiles/runExecuteTests.dir/build.make test/execute/CMakeFiles/runExecuteTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=46 "Built target runExecuteTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=46 "Built target runExecuteTests"
 .PHONY : test/execute/CMakeFiles/runExecuteTests.dir/all
 
 # Include target in all.
@@ -1073,9 +1073,9 @@ all: test/execute/CMakeFiles/runExecuteTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/execute/CMakeFiles/runExecuteTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 21
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 21
 	$(MAKE) -f CMakeFiles/Makefile2 test/execute/CMakeFiles/runExecuteTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : test/execute/CMakeFiles/runExecuteTests.dir/rule
 
 # Convenience name for target.
@@ -1123,7 +1123,7 @@ test/protocol/CMakeFiles/runProtocolTests.dir/all: src/protocol/CMakeFiles/Proto
 test/protocol/CMakeFiles/runProtocolTests.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f test/protocol/CMakeFiles/runProtocolTests.dir/build.make test/protocol/CMakeFiles/runProtocolTests.dir/depend
 	$(MAKE) -f test/protocol/CMakeFiles/runProtocolTests.dir/build.make test/protocol/CMakeFiles/runProtocolTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=48,49 "Built target runProtocolTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=48,49 "Built target runProtocolTests"
 .PHONY : test/protocol/CMakeFiles/runProtocolTests.dir/all
 
 # Include target in all.
@@ -1133,9 +1133,9 @@ all: test/protocol/CMakeFiles/runProtocolTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/protocol/CMakeFiles/runProtocolTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 test/protocol/CMakeFiles/runProtocolTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : test/protocol/CMakeFiles/runProtocolTests.dir/rule
 
 # Convenience name for target.
@@ -1185,7 +1185,7 @@ test/network/CMakeFiles/runNetworkTests.dir/all: src/network/CMakeFiles/Network.
 test/network/CMakeFiles/runNetworkTests.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f test/network/CMakeFiles/runNetworkTests.dir/build.make test/network/CMakeFiles/runNetworkTests.dir/depend
 	$(MAKE) -f test/network/CMakeFiles/runNetworkTests.dir/build.make test/network/CMakeFiles/runNetworkTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=47 "Built target runNetworkTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=47 "Built target runNetworkTests"
 .PHONY : test/network/CMakeFiles/runNetworkTests.dir/all
 
 # Include target in all.
@@ -1195,9 +1195,9 @@ all: test/network/CMakeFiles/runNetworkTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/network/CMakeFiles/runNetworkTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 52
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 52
 	$(MAKE) -f CMakeFiles/Makefile2 test/network/CMakeFiles/runNetworkTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : test/network/CMakeFiles/runNetworkTests.dir/rule
 
 # Convenience name for target.
@@ -1243,7 +1243,7 @@ test/storage/CMakeFiles/runStorageTests.dir/all: third-party/backward-cpp/CMakeF
 test/storage/CMakeFiles/runStorageTests.dir/all: src/storage/CMakeFiles/Storage.dir/all
 	$(MAKE) -f test/storage/CMakeFiles/runStorageTests.dir/build.make test/storage/CMakeFiles/runStorageTests.dir/depend
 	$(MAKE) -f test/storage/CMakeFiles/runStorageTests.dir/build.make test/storage/CMakeFiles/runStorageTests.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=50,51 "Built target runStorageTests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=50,51 "Built target runStorageTests"
 .PHONY : test/storage/CMakeFiles/runStorageTests.dir/all
 
 # Include target in all.
@@ -1253,9 +1253,9 @@ all: test/storage/CMakeFiles/runStorageTests.dir/all
 
 # Build rule for subdir invocation for target.
 test/storage/CMakeFiles/runStorageTests.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 9
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 9
 	$(MAKE) -f CMakeFiles/Makefile2 test/storage/CMakeFiles/runStorageTests.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : test/storage/CMakeFiles/runStorageTests.dir/rule
 
 # Convenience name for target.

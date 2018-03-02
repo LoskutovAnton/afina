@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/src/coroutine/Engine.cpp
+/home/antonloskutov/project_c/afina/src/coroutine/Engine.cpp
 afina/coroutine/Engine.h
 -
 setjmp.h

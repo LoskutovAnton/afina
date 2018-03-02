@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include src/network/CMakeFiles/Network.dir/depend.make
@@ -59,16 +59,16 @@ include src/network/CMakeFiles/Network.dir/flags.make
 
 src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.o: src/network/CMakeFiles/Network.dir/flags.make
 src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.o: src/network/uv/ServerImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.o"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/uv/ServerImpl.cpp.o -c /home/anton/Documents/afina/src/network/uv/ServerImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/uv/ServerImpl.cpp.o -c /home/antonloskutov/project_c/afina/src/network/uv/ServerImpl.cpp
 
 src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Network.dir/uv/ServerImpl.cpp.i"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/network/uv/ServerImpl.cpp > CMakeFiles/Network.dir/uv/ServerImpl.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/network/uv/ServerImpl.cpp > CMakeFiles/Network.dir/uv/ServerImpl.cpp.i
 
 src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Network.dir/uv/ServerImpl.cpp.s"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/network/uv/ServerImpl.cpp -o CMakeFiles/Network.dir/uv/ServerImpl.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/network/uv/ServerImpl.cpp -o CMakeFiles/Network.dir/uv/ServerImpl.cpp.s
 
 src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.o.requires:
 
@@ -83,16 +83,16 @@ src/network/CMakeFiles/Network.dir/uv/ServerImpl.cpp.o.provides.build: src/netwo
 
 src/network/CMakeFiles/Network.dir/uv/Worker.cpp.o: src/network/CMakeFiles/Network.dir/flags.make
 src/network/CMakeFiles/Network.dir/uv/Worker.cpp.o: src/network/uv/Worker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/network/CMakeFiles/Network.dir/uv/Worker.cpp.o"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/uv/Worker.cpp.o -c /home/anton/Documents/afina/src/network/uv/Worker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/network/CMakeFiles/Network.dir/uv/Worker.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/uv/Worker.cpp.o -c /home/antonloskutov/project_c/afina/src/network/uv/Worker.cpp
 
 src/network/CMakeFiles/Network.dir/uv/Worker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Network.dir/uv/Worker.cpp.i"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/network/uv/Worker.cpp > CMakeFiles/Network.dir/uv/Worker.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/network/uv/Worker.cpp > CMakeFiles/Network.dir/uv/Worker.cpp.i
 
 src/network/CMakeFiles/Network.dir/uv/Worker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Network.dir/uv/Worker.cpp.s"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/network/uv/Worker.cpp -o CMakeFiles/Network.dir/uv/Worker.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/network/uv/Worker.cpp -o CMakeFiles/Network.dir/uv/Worker.cpp.s
 
 src/network/CMakeFiles/Network.dir/uv/Worker.cpp.o.requires:
 
@@ -107,16 +107,16 @@ src/network/CMakeFiles/Network.dir/uv/Worker.cpp.o.provides.build: src/network/C
 
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: src/network/CMakeFiles/Network.dir/flags.make
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: src/network/blocking/ServerImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o -c /home/anton/Documents/afina/src/network/blocking/ServerImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o -c /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.cpp
 
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Network.dir/blocking/ServerImpl.cpp.i"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/network/blocking/ServerImpl.cpp > CMakeFiles/Network.dir/blocking/ServerImpl.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.cpp > CMakeFiles/Network.dir/blocking/ServerImpl.cpp.i
 
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Network.dir/blocking/ServerImpl.cpp.s"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/network/blocking/ServerImpl.cpp -o CMakeFiles/Network.dir/blocking/ServerImpl.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.cpp -o CMakeFiles/Network.dir/blocking/ServerImpl.cpp.s
 
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o.requires:
 
@@ -131,16 +131,16 @@ src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o.provides.build: src
 
 src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o: src/network/CMakeFiles/Network.dir/flags.make
 src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o: src/network/nonblocking/ServerImpl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o -c /home/anton/Documents/afina/src/network/nonblocking/ServerImpl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o -c /home/antonloskutov/project_c/afina/src/network/nonblocking/ServerImpl.cpp
 
 src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.i"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/network/nonblocking/ServerImpl.cpp > CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/network/nonblocking/ServerImpl.cpp > CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.i
 
 src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.s"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/network/nonblocking/ServerImpl.cpp -o CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/network/nonblocking/ServerImpl.cpp -o CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.s
 
 src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o.requires:
 
@@ -155,16 +155,16 @@ src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o.provides.build: 
 
 src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.o: src/network/CMakeFiles/Network.dir/flags.make
 src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.o: src/network/nonblocking/Worker.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.o"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/nonblocking/Worker.cpp.o -c /home/anton/Documents/afina/src/network/nonblocking/Worker.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/nonblocking/Worker.cpp.o -c /home/antonloskutov/project_c/afina/src/network/nonblocking/Worker.cpp
 
 src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Network.dir/nonblocking/Worker.cpp.i"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/network/nonblocking/Worker.cpp > CMakeFiles/Network.dir/nonblocking/Worker.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/network/nonblocking/Worker.cpp > CMakeFiles/Network.dir/nonblocking/Worker.cpp.i
 
 src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Network.dir/nonblocking/Worker.cpp.s"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/network/nonblocking/Worker.cpp -o CMakeFiles/Network.dir/nonblocking/Worker.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/network/nonblocking/Worker.cpp -o CMakeFiles/Network.dir/nonblocking/Worker.cpp.s
 
 src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.o.requires:
 
@@ -179,16 +179,16 @@ src/network/CMakeFiles/Network.dir/nonblocking/Worker.cpp.o.provides.build: src/
 
 src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.o: src/network/CMakeFiles/Network.dir/flags.make
 src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.o: src/network/nonblocking/Utils.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.o"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/nonblocking/Utils.cpp.o -c /home/anton/Documents/afina/src/network/nonblocking/Utils.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Network.dir/nonblocking/Utils.cpp.o -c /home/antonloskutov/project_c/afina/src/network/nonblocking/Utils.cpp
 
 src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Network.dir/nonblocking/Utils.cpp.i"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/network/nonblocking/Utils.cpp > CMakeFiles/Network.dir/nonblocking/Utils.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/network/nonblocking/Utils.cpp > CMakeFiles/Network.dir/nonblocking/Utils.cpp.i
 
 src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Network.dir/nonblocking/Utils.cpp.s"
-	cd /home/anton/Documents/afina/src/network && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/network/nonblocking/Utils.cpp -o CMakeFiles/Network.dir/nonblocking/Utils.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/network && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/network/nonblocking/Utils.cpp -o CMakeFiles/Network.dir/nonblocking/Utils.cpp.s
 
 src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.o.requires:
 
@@ -221,9 +221,9 @@ src/network/libNetwork.a: src/network/CMakeFiles/Network.dir/nonblocking/Worker.
 src/network/libNetwork.a: src/network/CMakeFiles/Network.dir/nonblocking/Utils.cpp.o
 src/network/libNetwork.a: src/network/CMakeFiles/Network.dir/build.make
 src/network/libNetwork.a: src/network/CMakeFiles/Network.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libNetwork.a"
-	cd /home/anton/Documents/afina/src/network && $(CMAKE_COMMAND) -P CMakeFiles/Network.dir/cmake_clean_target.cmake
-	cd /home/anton/Documents/afina/src/network && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Network.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libNetwork.a"
+	cd /home/antonloskutov/project_c/afina/src/network && $(CMAKE_COMMAND) -P CMakeFiles/Network.dir/cmake_clean_target.cmake
+	cd /home/antonloskutov/project_c/afina/src/network && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Network.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/network/CMakeFiles/Network.dir/build: src/network/libNetwork.a
@@ -240,10 +240,10 @@ src/network/CMakeFiles/Network.dir/requires: src/network/CMakeFiles/Network.dir/
 .PHONY : src/network/CMakeFiles/Network.dir/requires
 
 src/network/CMakeFiles/Network.dir/clean:
-	cd /home/anton/Documents/afina/src/network && $(CMAKE_COMMAND) -P CMakeFiles/Network.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/src/network && $(CMAKE_COMMAND) -P CMakeFiles/Network.dir/cmake_clean.cmake
 .PHONY : src/network/CMakeFiles/Network.dir/clean
 
 src/network/CMakeFiles/Network.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/src/network /home/anton/Documents/afina /home/anton/Documents/afina/src/network /home/anton/Documents/afina/src/network/CMakeFiles/Network.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/src/network /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/src/network /home/antonloskutov/project_c/afina/src/network/CMakeFiles/Network.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/network/CMakeFiles/Network.dir/depend
 

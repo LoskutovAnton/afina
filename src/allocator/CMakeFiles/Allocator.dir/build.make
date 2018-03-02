@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include src/allocator/CMakeFiles/Allocator.dir/depend.make
@@ -59,16 +59,16 @@ include src/allocator/CMakeFiles/Allocator.dir/flags.make
 
 src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o: src/allocator/CMakeFiles/Allocator.dir/flags.make
 src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o: src/allocator/Simple.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o"
-	cd /home/anton/Documents/afina/src/allocator && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Allocator.dir/Simple.cpp.o -c /home/anton/Documents/afina/src/allocator/Simple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/allocator && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Allocator.dir/Simple.cpp.o -c /home/antonloskutov/project_c/afina/src/allocator/Simple.cpp
 
 src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Allocator.dir/Simple.cpp.i"
-	cd /home/anton/Documents/afina/src/allocator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/allocator/Simple.cpp > CMakeFiles/Allocator.dir/Simple.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/allocator && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/allocator/Simple.cpp > CMakeFiles/Allocator.dir/Simple.cpp.i
 
 src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Allocator.dir/Simple.cpp.s"
-	cd /home/anton/Documents/afina/src/allocator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/allocator/Simple.cpp -o CMakeFiles/Allocator.dir/Simple.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/allocator && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/allocator/Simple.cpp -o CMakeFiles/Allocator.dir/Simple.cpp.s
 
 src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o.requires:
 
@@ -83,16 +83,16 @@ src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o.provides.build: src/allocato
 
 src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o: src/allocator/CMakeFiles/Allocator.dir/flags.make
 src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o: src/allocator/Pointer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o"
-	cd /home/anton/Documents/afina/src/allocator && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Allocator.dir/Pointer.cpp.o -c /home/anton/Documents/afina/src/allocator/Pointer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/allocator && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Allocator.dir/Pointer.cpp.o -c /home/antonloskutov/project_c/afina/src/allocator/Pointer.cpp
 
 src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Allocator.dir/Pointer.cpp.i"
-	cd /home/anton/Documents/afina/src/allocator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/src/allocator/Pointer.cpp > CMakeFiles/Allocator.dir/Pointer.cpp.i
+	cd /home/antonloskutov/project_c/afina/src/allocator && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/allocator/Pointer.cpp > CMakeFiles/Allocator.dir/Pointer.cpp.i
 
 src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Allocator.dir/Pointer.cpp.s"
-	cd /home/anton/Documents/afina/src/allocator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/src/allocator/Pointer.cpp -o CMakeFiles/Allocator.dir/Pointer.cpp.s
+	cd /home/antonloskutov/project_c/afina/src/allocator && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/allocator/Pointer.cpp -o CMakeFiles/Allocator.dir/Pointer.cpp.s
 
 src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o.requires:
 
@@ -117,9 +117,9 @@ src/allocator/libAllocator.a: src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.
 src/allocator/libAllocator.a: src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o
 src/allocator/libAllocator.a: src/allocator/CMakeFiles/Allocator.dir/build.make
 src/allocator/libAllocator.a: src/allocator/CMakeFiles/Allocator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libAllocator.a"
-	cd /home/anton/Documents/afina/src/allocator && $(CMAKE_COMMAND) -P CMakeFiles/Allocator.dir/cmake_clean_target.cmake
-	cd /home/anton/Documents/afina/src/allocator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Allocator.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libAllocator.a"
+	cd /home/antonloskutov/project_c/afina/src/allocator && $(CMAKE_COMMAND) -P CMakeFiles/Allocator.dir/cmake_clean_target.cmake
+	cd /home/antonloskutov/project_c/afina/src/allocator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Allocator.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/allocator/CMakeFiles/Allocator.dir/build: src/allocator/libAllocator.a
@@ -132,10 +132,10 @@ src/allocator/CMakeFiles/Allocator.dir/requires: src/allocator/CMakeFiles/Alloca
 .PHONY : src/allocator/CMakeFiles/Allocator.dir/requires
 
 src/allocator/CMakeFiles/Allocator.dir/clean:
-	cd /home/anton/Documents/afina/src/allocator && $(CMAKE_COMMAND) -P CMakeFiles/Allocator.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/src/allocator && $(CMAKE_COMMAND) -P CMakeFiles/Allocator.dir/cmake_clean.cmake
 .PHONY : src/allocator/CMakeFiles/Allocator.dir/clean
 
 src/allocator/CMakeFiles/Allocator.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/src/allocator /home/anton/Documents/afina /home/anton/Documents/afina/src/allocator /home/anton/Documents/afina/src/allocator/CMakeFiles/Allocator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/src/allocator /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/src/allocator /home/antonloskutov/project_c/afina/src/allocator/CMakeFiles/Allocator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/allocator/CMakeFiles/Allocator.dir/depend
 

@@ -6,14 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/src/storage/MapBasedGlobalLockImpl.cpp
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.cpp
 MapBasedGlobalLockImpl.h
-/home/anton/Documents/afina/src/storage/MapBasedGlobalLockImpl.h
-mutex
--
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.h
 
-/home/anton/Documents/afina/src/storage/MapBasedGlobalLockImpl.h
-map
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.h
+unordered_map
 -
 mutex
 -

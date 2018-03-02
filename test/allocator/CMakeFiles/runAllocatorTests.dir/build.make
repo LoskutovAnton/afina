@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include test/allocator/CMakeFiles/runAllocatorTests.dir/depend.make
@@ -59,16 +59,16 @@ include test/allocator/CMakeFiles/runAllocatorTests.dir/flags.make
 
 test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o: test/allocator/CMakeFiles/runAllocatorTests.dir/flags.make
 test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o: test/allocator/SimpleTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o"
-	cd /home/anton/Documents/afina/test/allocator && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o -c /home/anton/Documents/afina/test/allocator/SimpleTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o"
+	cd /home/antonloskutov/project_c/afina/test/allocator && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o -c /home/antonloskutov/project_c/afina/test/allocator/SimpleTest.cpp
 
 test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.i"
-	cd /home/anton/Documents/afina/test/allocator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/test/allocator/SimpleTest.cpp > CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.i
+	cd /home/antonloskutov/project_c/afina/test/allocator && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/test/allocator/SimpleTest.cpp > CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.i
 
 test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.s"
-	cd /home/anton/Documents/afina/test/allocator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/test/allocator/SimpleTest.cpp -o CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.s
+	cd /home/antonloskutov/project_c/afina/test/allocator && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/test/allocator/SimpleTest.cpp -o CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.s
 
 test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o.requires:
 
@@ -87,7 +87,7 @@ runAllocatorTests_OBJECTS = \
 
 # External object files for target runAllocatorTests
 runAllocatorTests_EXTERNAL_OBJECTS = \
-"/home/anton/Documents/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
+"/home/antonloskutov/project_c/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
 
 test/allocator/runAllocatorTests: test/allocator/CMakeFiles/runAllocatorTests.dir/SimpleTest.cpp.o
 test/allocator/runAllocatorTests: third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o
@@ -96,10 +96,30 @@ test/allocator/runAllocatorTests: src/allocator/libAllocator.a
 test/allocator/runAllocatorTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 test/allocator/runAllocatorTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a
 test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/allocator/runAllocatorTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/allocator/runAllocatorTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 test/allocator/runAllocatorTests: test/allocator/CMakeFiles/runAllocatorTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runAllocatorTests"
-	cd /home/anton/Documents/afina/test/allocator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runAllocatorTests.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runAllocatorTests"
+	cd /home/antonloskutov/project_c/afina/test/allocator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runAllocatorTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/allocator/CMakeFiles/runAllocatorTests.dir/build: test/allocator/runAllocatorTests
@@ -111,10 +131,10 @@ test/allocator/CMakeFiles/runAllocatorTests.dir/requires: test/allocator/CMakeFi
 .PHONY : test/allocator/CMakeFiles/runAllocatorTests.dir/requires
 
 test/allocator/CMakeFiles/runAllocatorTests.dir/clean:
-	cd /home/anton/Documents/afina/test/allocator && $(CMAKE_COMMAND) -P CMakeFiles/runAllocatorTests.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/test/allocator && $(CMAKE_COMMAND) -P CMakeFiles/runAllocatorTests.dir/cmake_clean.cmake
 .PHONY : test/allocator/CMakeFiles/runAllocatorTests.dir/clean
 
 test/allocator/CMakeFiles/runAllocatorTests.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/test/allocator /home/anton/Documents/afina /home/anton/Documents/afina/test/allocator /home/anton/Documents/afina/test/allocator/CMakeFiles/runAllocatorTests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/test/allocator /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/test/allocator /home/antonloskutov/project_c/afina/test/allocator/CMakeFiles/runAllocatorTests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/allocator/CMakeFiles/runAllocatorTests.dir/depend
 

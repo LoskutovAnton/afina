@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -66,6 +66,17 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
 
 # Special rule for the target list_install_components
 list_install_components:
@@ -100,6 +111,17 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -111,27 +133,16 @@ install/local/fast: install/local
 
 .PHONY : install/local/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles /home/anton/Documents/afina/src/execute/CMakeFiles/progress.marks
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles /home/antonloskutov/project_c/afina/src/execute/CMakeFiles/progress.marks
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/clean
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/execute/CMakeFiles/Execute.dir/rule:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/CMakeFiles/Execute.dir/rule
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 src/execute/CMakeFiles/Execute.dir/rule
 .PHONY : src/execute/CMakeFiles/Execute.dir/rule
 
 # Convenience name for target.
@@ -166,7 +177,7 @@ Execute: src/execute/CMakeFiles/Execute.dir/rule
 
 # fast build rule for target.
 Execute/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/build
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/build
 .PHONY : Execute/fast
 
 Add.o: Add.cpp.o
@@ -175,7 +186,7 @@ Add.o: Add.cpp.o
 
 # target to build an object file
 Add.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Add.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Add.cpp.o
 .PHONY : Add.cpp.o
 
 Add.i: Add.cpp.i
@@ -184,7 +195,7 @@ Add.i: Add.cpp.i
 
 # target to preprocess a source file
 Add.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Add.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Add.cpp.i
 .PHONY : Add.cpp.i
 
 Add.s: Add.cpp.s
@@ -193,7 +204,7 @@ Add.s: Add.cpp.s
 
 # target to generate assembly for a file
 Add.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Add.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Add.cpp.s
 .PHONY : Add.cpp.s
 
 Append.o: Append.cpp.o
@@ -202,7 +213,7 @@ Append.o: Append.cpp.o
 
 # target to build an object file
 Append.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Append.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Append.cpp.o
 .PHONY : Append.cpp.o
 
 Append.i: Append.cpp.i
@@ -211,7 +222,7 @@ Append.i: Append.cpp.i
 
 # target to preprocess a source file
 Append.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Append.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Append.cpp.i
 .PHONY : Append.cpp.i
 
 Append.s: Append.cpp.s
@@ -220,7 +231,7 @@ Append.s: Append.cpp.s
 
 # target to generate assembly for a file
 Append.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Append.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Append.cpp.s
 .PHONY : Append.cpp.s
 
 Command.o: Command.cpp.o
@@ -229,7 +240,7 @@ Command.o: Command.cpp.o
 
 # target to build an object file
 Command.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Command.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Command.cpp.o
 .PHONY : Command.cpp.o
 
 Command.i: Command.cpp.i
@@ -238,7 +249,7 @@ Command.i: Command.cpp.i
 
 # target to preprocess a source file
 Command.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Command.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Command.cpp.i
 .PHONY : Command.cpp.i
 
 Command.s: Command.cpp.s
@@ -247,7 +258,7 @@ Command.s: Command.cpp.s
 
 # target to generate assembly for a file
 Command.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Command.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Command.cpp.s
 .PHONY : Command.cpp.s
 
 Get.o: Get.cpp.o
@@ -256,7 +267,7 @@ Get.o: Get.cpp.o
 
 # target to build an object file
 Get.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Get.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Get.cpp.o
 .PHONY : Get.cpp.o
 
 Get.i: Get.cpp.i
@@ -265,7 +276,7 @@ Get.i: Get.cpp.i
 
 # target to preprocess a source file
 Get.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Get.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Get.cpp.i
 .PHONY : Get.cpp.i
 
 Get.s: Get.cpp.s
@@ -274,7 +285,7 @@ Get.s: Get.cpp.s
 
 # target to generate assembly for a file
 Get.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Get.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Get.cpp.s
 .PHONY : Get.cpp.s
 
 Replace.o: Replace.cpp.o
@@ -283,7 +294,7 @@ Replace.o: Replace.cpp.o
 
 # target to build an object file
 Replace.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Replace.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Replace.cpp.o
 .PHONY : Replace.cpp.o
 
 Replace.i: Replace.cpp.i
@@ -292,7 +303,7 @@ Replace.i: Replace.cpp.i
 
 # target to preprocess a source file
 Replace.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Replace.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Replace.cpp.i
 .PHONY : Replace.cpp.i
 
 Replace.s: Replace.cpp.s
@@ -301,7 +312,7 @@ Replace.s: Replace.cpp.s
 
 # target to generate assembly for a file
 Replace.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Replace.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Replace.cpp.s
 .PHONY : Replace.cpp.s
 
 Set.o: Set.cpp.o
@@ -310,7 +321,7 @@ Set.o: Set.cpp.o
 
 # target to build an object file
 Set.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Set.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Set.cpp.o
 .PHONY : Set.cpp.o
 
 Set.i: Set.cpp.i
@@ -319,7 +330,7 @@ Set.i: Set.cpp.i
 
 # target to preprocess a source file
 Set.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Set.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Set.cpp.i
 .PHONY : Set.cpp.i
 
 Set.s: Set.cpp.s
@@ -328,7 +339,7 @@ Set.s: Set.cpp.s
 
 # target to generate assembly for a file
 Set.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Set.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Set.cpp.s
 .PHONY : Set.cpp.s
 
 Stats.o: Stats.cpp.o
@@ -337,7 +348,7 @@ Stats.o: Stats.cpp.o
 
 # target to build an object file
 Stats.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Stats.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Stats.cpp.o
 .PHONY : Stats.cpp.o
 
 Stats.i: Stats.cpp.i
@@ -346,7 +357,7 @@ Stats.i: Stats.cpp.i
 
 # target to preprocess a source file
 Stats.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Stats.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Stats.cpp.i
 .PHONY : Stats.cpp.i
 
 Stats.s: Stats.cpp.s
@@ -355,7 +366,7 @@ Stats.s: Stats.cpp.s
 
 # target to generate assembly for a file
 Stats.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Stats.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Stats.cpp.s
 .PHONY : Stats.cpp.s
 
 # Help Target
@@ -365,12 +376,13 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... Execute"
 	@echo "... test"
+	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... edit_cache"
 	@echo "... Add.o"
 	@echo "... Add.i"
 	@echo "... Add.s"
@@ -403,6 +415,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

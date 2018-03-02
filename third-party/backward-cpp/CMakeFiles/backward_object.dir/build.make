@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include third-party/backward-cpp/CMakeFiles/backward_object.dir/depend.make
@@ -59,16 +59,16 @@ include third-party/backward-cpp/CMakeFiles/backward_object.dir/flags.make
 
 third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o: third-party/backward-cpp/CMakeFiles/backward_object.dir/flags.make
 third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o: third-party/backward-cpp/backward.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
-	cd /home/anton/Documents/afina/third-party/backward-cpp && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backward_object.dir/backward.cpp.o -c /home/anton/Documents/afina/third-party/backward-cpp/backward.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
+	cd /home/antonloskutov/project_c/afina/third-party/backward-cpp && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/backward_object.dir/backward.cpp.o -c /home/antonloskutov/project_c/afina/third-party/backward-cpp/backward.cpp
 
 third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/backward_object.dir/backward.cpp.i"
-	cd /home/anton/Documents/afina/third-party/backward-cpp && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/third-party/backward-cpp/backward.cpp > CMakeFiles/backward_object.dir/backward.cpp.i
+	cd /home/antonloskutov/project_c/afina/third-party/backward-cpp && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/backward-cpp/backward.cpp > CMakeFiles/backward_object.dir/backward.cpp.i
 
 third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/backward_object.dir/backward.cpp.s"
-	cd /home/anton/Documents/afina/third-party/backward-cpp && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/third-party/backward-cpp/backward.cpp -o CMakeFiles/backward_object.dir/backward.cpp.s
+	cd /home/antonloskutov/project_c/afina/third-party/backward-cpp && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/backward-cpp/backward.cpp -o CMakeFiles/backward_object.dir/backward.cpp.s
 
 third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o.requires:
 
@@ -96,10 +96,10 @@ third-party/backward-cpp/CMakeFiles/backward_object.dir/requires: third-party/ba
 .PHONY : third-party/backward-cpp/CMakeFiles/backward_object.dir/requires
 
 third-party/backward-cpp/CMakeFiles/backward_object.dir/clean:
-	cd /home/anton/Documents/afina/third-party/backward-cpp && $(CMAKE_COMMAND) -P CMakeFiles/backward_object.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/third-party/backward-cpp && $(CMAKE_COMMAND) -P CMakeFiles/backward_object.dir/cmake_clean.cmake
 .PHONY : third-party/backward-cpp/CMakeFiles/backward_object.dir/clean
 
 third-party/backward-cpp/CMakeFiles/backward_object.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/third-party/backward-cpp /home/anton/Documents/afina /home/anton/Documents/afina/third-party/backward-cpp /home/anton/Documents/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/third-party/backward-cpp /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/third-party/backward-cpp /home/antonloskutov/project_c/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third-party/backward-cpp/CMakeFiles/backward_object.dir/depend
 

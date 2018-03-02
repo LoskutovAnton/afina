@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton/Documents/afina/src/allocator/Pointer.cpp" "/home/anton/Documents/afina/src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o"
-  "/home/anton/Documents/afina/src/allocator/Simple.cpp" "/home/anton/Documents/afina/src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/allocator/Pointer.cpp" "/home/antonloskutov/project_c/afina/src/allocator/CMakeFiles/Allocator.dir/Pointer.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/allocator/Simple.cpp" "/home/antonloskutov/project_c/afina/src/allocator/CMakeFiles/Allocator.dir/Simple.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

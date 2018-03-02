@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include third-party/libuv-1.11.0/CMakeFiles/uv.dir/depend.make
@@ -59,16 +59,16 @@ include third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.o: third-party/libuv-1.11.0/src/fs-poll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/fs-poll.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/fs-poll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/fs-poll.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/fs-poll.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/fs-poll.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/fs-poll.c > CMakeFiles/uv.dir/src/fs-poll.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/fs-poll.c > CMakeFiles/uv.dir/src/fs-poll.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/fs-poll.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/fs-poll.c -o CMakeFiles/uv.dir/src/fs-poll.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/fs-poll.c -o CMakeFiles/uv.dir/src/fs-poll.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.o.requires:
 
@@ -83,16 +83,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/fs-poll.c.o.provides.build: third
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.o: third-party/libuv-1.11.0/src/inet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/inet.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/inet.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/inet.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/inet.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/inet.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/inet.c > CMakeFiles/uv.dir/src/inet.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/inet.c > CMakeFiles/uv.dir/src/inet.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/inet.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/inet.c -o CMakeFiles/uv.dir/src/inet.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/inet.c -o CMakeFiles/uv.dir/src/inet.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.o.requires:
 
@@ -107,16 +107,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/inet.c.o.provides.build: third-pa
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.o: third-party/libuv-1.11.0/src/threadpool.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/threadpool.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/threadpool.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/threadpool.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/threadpool.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/threadpool.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/threadpool.c > CMakeFiles/uv.dir/src/threadpool.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/threadpool.c > CMakeFiles/uv.dir/src/threadpool.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/threadpool.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/threadpool.c -o CMakeFiles/uv.dir/src/threadpool.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/threadpool.c -o CMakeFiles/uv.dir/src/threadpool.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.o.requires:
 
@@ -131,16 +131,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/threadpool.c.o.provides.build: th
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.o: third-party/libuv-1.11.0/src/uv-common.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/uv-common.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/uv-common.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/uv-common.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.c > CMakeFiles/uv.dir/src/uv-common.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.c > CMakeFiles/uv.dir/src/uv-common.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/uv-common.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/uv-common.c -o CMakeFiles/uv.dir/src/uv-common.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/uv-common.c -o CMakeFiles/uv.dir/src/uv-common.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.o.requires:
 
@@ -155,16 +155,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/uv-common.c.o.provides.build: thi
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.o: third-party/libuv-1.11.0/src/version.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/version.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/version.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/version.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/version.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/version.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/version.c > CMakeFiles/uv.dir/src/version.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/version.c > CMakeFiles/uv.dir/src/version.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/version.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/version.c -o CMakeFiles/uv.dir/src/version.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/version.c -o CMakeFiles/uv.dir/src/version.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.o.requires:
 
@@ -179,16 +179,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/version.c.o.provides.build: third
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o: third-party/libuv-1.11.0/src/unix/linux-syscalls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/linux-syscalls.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c > CMakeFiles/uv.dir/src/unix/linux-syscalls.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c > CMakeFiles/uv.dir/src/unix/linux-syscalls.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/linux-syscalls.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c -o CMakeFiles/uv.dir/src/unix/linux-syscalls.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-syscalls.c -o CMakeFiles/uv.dir/src/unix/linux-syscalls.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o.requires:
 
@@ -203,16 +203,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-syscalls.c.o.provides.
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.o: third-party/libuv-1.11.0/src/unix/linux-core.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/linux-core.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-core.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/linux-core.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-core.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/linux-core.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-core.c > CMakeFiles/uv.dir/src/unix/linux-core.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-core.c > CMakeFiles/uv.dir/src/unix/linux-core.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/linux-core.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-core.c -o CMakeFiles/uv.dir/src/unix/linux-core.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-core.c -o CMakeFiles/uv.dir/src/unix/linux-core.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.o.requires:
 
@@ -227,16 +227,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-core.c.o.provides.buil
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.o: third-party/libuv-1.11.0/src/unix/linux-inotify.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/linux-inotify.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/linux-inotify.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/linux-inotify.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c > CMakeFiles/uv.dir/src/unix/linux-inotify.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c > CMakeFiles/uv.dir/src/unix/linux-inotify.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/linux-inotify.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c -o CMakeFiles/uv.dir/src/unix/linux-inotify.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/linux-inotify.c -o CMakeFiles/uv.dir/src/unix/linux-inotify.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.o.requires:
 
@@ -251,16 +251,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/linux-inotify.c.o.provides.b
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.o: third-party/libuv-1.11.0/src/unix/async.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/async.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/async.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/async.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/async.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/async.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/async.c > CMakeFiles/uv.dir/src/unix/async.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/async.c > CMakeFiles/uv.dir/src/unix/async.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/async.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/async.c -o CMakeFiles/uv.dir/src/unix/async.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/async.c -o CMakeFiles/uv.dir/src/unix/async.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.o.requires:
 
@@ -275,16 +275,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/async.c.o.provides.build: th
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.o: third-party/libuv-1.11.0/src/unix/core.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/core.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/core.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/core.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/core.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/core.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/core.c > CMakeFiles/uv.dir/src/unix/core.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/core.c > CMakeFiles/uv.dir/src/unix/core.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/core.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/core.c -o CMakeFiles/uv.dir/src/unix/core.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/core.c -o CMakeFiles/uv.dir/src/unix/core.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.o.requires:
 
@@ -299,16 +299,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/core.c.o.provides.build: thi
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.o: third-party/libuv-1.11.0/src/unix/dl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/dl.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/dl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/dl.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/dl.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/dl.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/dl.c > CMakeFiles/uv.dir/src/unix/dl.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/dl.c > CMakeFiles/uv.dir/src/unix/dl.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/dl.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/dl.c -o CMakeFiles/uv.dir/src/unix/dl.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/dl.c -o CMakeFiles/uv.dir/src/unix/dl.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.o.requires:
 
@@ -323,16 +323,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/dl.c.o.provides.build: third
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.o: third-party/libuv-1.11.0/src/unix/fs.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/fs.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/fs.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/fs.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/fs.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/fs.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/fs.c > CMakeFiles/uv.dir/src/unix/fs.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/fs.c > CMakeFiles/uv.dir/src/unix/fs.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/fs.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/fs.c -o CMakeFiles/uv.dir/src/unix/fs.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/fs.c -o CMakeFiles/uv.dir/src/unix/fs.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.o.requires:
 
@@ -347,16 +347,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/fs.c.o.provides.build: third
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o: third-party/libuv-1.11.0/src/unix/getaddrinfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/getaddrinfo.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c > CMakeFiles/uv.dir/src/unix/getaddrinfo.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c > CMakeFiles/uv.dir/src/unix/getaddrinfo.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/getaddrinfo.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c -o CMakeFiles/uv.dir/src/unix/getaddrinfo.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getaddrinfo.c -o CMakeFiles/uv.dir/src/unix/getaddrinfo.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o.requires:
 
@@ -371,16 +371,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getaddrinfo.c.o.provides.bui
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.o: third-party/libuv-1.11.0/src/unix/getnameinfo.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/getnameinfo.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/getnameinfo.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/getnameinfo.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c > CMakeFiles/uv.dir/src/unix/getnameinfo.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c > CMakeFiles/uv.dir/src/unix/getnameinfo.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/getnameinfo.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c -o CMakeFiles/uv.dir/src/unix/getnameinfo.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/getnameinfo.c -o CMakeFiles/uv.dir/src/unix/getnameinfo.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.o.requires:
 
@@ -395,16 +395,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/getnameinfo.c.o.provides.bui
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.o: third-party/libuv-1.11.0/src/unix/loop-watcher.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/loop-watcher.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/loop-watcher.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/loop-watcher.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c > CMakeFiles/uv.dir/src/unix/loop-watcher.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c > CMakeFiles/uv.dir/src/unix/loop-watcher.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/loop-watcher.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c -o CMakeFiles/uv.dir/src/unix/loop-watcher.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop-watcher.c -o CMakeFiles/uv.dir/src/unix/loop-watcher.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.o.requires:
 
@@ -419,16 +419,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop-watcher.c.o.provides.bu
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.o: third-party/libuv-1.11.0/src/unix/loop.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/loop.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/loop.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/loop.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop.c > CMakeFiles/uv.dir/src/unix/loop.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop.c > CMakeFiles/uv.dir/src/unix/loop.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/loop.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/loop.c -o CMakeFiles/uv.dir/src/unix/loop.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/loop.c -o CMakeFiles/uv.dir/src/unix/loop.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.o.requires:
 
@@ -443,16 +443,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/loop.c.o.provides.build: thi
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.o: third-party/libuv-1.11.0/src/unix/pipe.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/pipe.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/pipe.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/pipe.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/pipe.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/pipe.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/pipe.c > CMakeFiles/uv.dir/src/unix/pipe.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/pipe.c > CMakeFiles/uv.dir/src/unix/pipe.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/pipe.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/pipe.c -o CMakeFiles/uv.dir/src/unix/pipe.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/pipe.c -o CMakeFiles/uv.dir/src/unix/pipe.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.o.requires:
 
@@ -467,16 +467,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/pipe.c.o.provides.build: thi
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.o: third-party/libuv-1.11.0/src/unix/poll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/poll.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/poll.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/poll.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/poll.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/poll.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/poll.c > CMakeFiles/uv.dir/src/unix/poll.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/poll.c > CMakeFiles/uv.dir/src/unix/poll.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/poll.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/poll.c -o CMakeFiles/uv.dir/src/unix/poll.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/poll.c -o CMakeFiles/uv.dir/src/unix/poll.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.o.requires:
 
@@ -491,16 +491,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/poll.c.o.provides.build: thi
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.o: third-party/libuv-1.11.0/src/unix/process.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/process.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/process.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/process.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/process.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/process.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/process.c > CMakeFiles/uv.dir/src/unix/process.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/process.c > CMakeFiles/uv.dir/src/unix/process.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/process.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/process.c -o CMakeFiles/uv.dir/src/unix/process.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/process.c -o CMakeFiles/uv.dir/src/unix/process.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.o.requires:
 
@@ -515,16 +515,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/process.c.o.provides.build: 
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.o: third-party/libuv-1.11.0/src/unix/signal.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/signal.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/signal.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/signal.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/signal.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/signal.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/signal.c > CMakeFiles/uv.dir/src/unix/signal.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/signal.c > CMakeFiles/uv.dir/src/unix/signal.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/signal.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/signal.c -o CMakeFiles/uv.dir/src/unix/signal.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/signal.c -o CMakeFiles/uv.dir/src/unix/signal.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.o.requires:
 
@@ -539,16 +539,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/signal.c.o.provides.build: t
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.o: third-party/libuv-1.11.0/src/unix/stream.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/stream.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/stream.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/stream.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/stream.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/stream.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/stream.c > CMakeFiles/uv.dir/src/unix/stream.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/stream.c > CMakeFiles/uv.dir/src/unix/stream.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/stream.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/stream.c -o CMakeFiles/uv.dir/src/unix/stream.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/stream.c -o CMakeFiles/uv.dir/src/unix/stream.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.o.requires:
 
@@ -563,16 +563,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/stream.c.o.provides.build: t
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.o: third-party/libuv-1.11.0/src/unix/tcp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/tcp.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tcp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/tcp.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tcp.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/tcp.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tcp.c > CMakeFiles/uv.dir/src/unix/tcp.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tcp.c > CMakeFiles/uv.dir/src/unix/tcp.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/tcp.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tcp.c -o CMakeFiles/uv.dir/src/unix/tcp.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tcp.c -o CMakeFiles/uv.dir/src/unix/tcp.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.o.requires:
 
@@ -587,16 +587,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tcp.c.o.provides.build: thir
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.o: third-party/libuv-1.11.0/src/unix/thread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/thread.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/thread.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/thread.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/thread.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/thread.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/thread.c > CMakeFiles/uv.dir/src/unix/thread.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/thread.c > CMakeFiles/uv.dir/src/unix/thread.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/thread.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/thread.c -o CMakeFiles/uv.dir/src/unix/thread.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/thread.c -o CMakeFiles/uv.dir/src/unix/thread.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.o.requires:
 
@@ -611,16 +611,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/thread.c.o.provides.build: t
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.o: third-party/libuv-1.11.0/src/unix/timer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/timer.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/timer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/timer.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/timer.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/timer.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/timer.c > CMakeFiles/uv.dir/src/unix/timer.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/timer.c > CMakeFiles/uv.dir/src/unix/timer.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/timer.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/timer.c -o CMakeFiles/uv.dir/src/unix/timer.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/timer.c -o CMakeFiles/uv.dir/src/unix/timer.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.o.requires:
 
@@ -635,16 +635,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/timer.c.o.provides.build: th
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.o: third-party/libuv-1.11.0/src/unix/tty.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/tty.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tty.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/tty.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tty.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/tty.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tty.c > CMakeFiles/uv.dir/src/unix/tty.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tty.c > CMakeFiles/uv.dir/src/unix/tty.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/tty.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/tty.c -o CMakeFiles/uv.dir/src/unix/tty.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/tty.c -o CMakeFiles/uv.dir/src/unix/tty.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.o.requires:
 
@@ -659,16 +659,16 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/tty.c.o.provides.build: thir
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.o: third-party/libuv-1.11.0/CMakeFiles/uv.dir/flags.make
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.o: third-party/libuv-1.11.0/src/unix/udp.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.o"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/udp.c.o   -c /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/udp.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.o"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/uv.dir/src/unix/udp.c.o   -c /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/udp.c
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/uv.dir/src/unix/udp.c.i"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/udp.c > CMakeFiles/uv.dir/src/unix/udp.c.i
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/udp.c > CMakeFiles/uv.dir/src/unix/udp.c.i
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/uv.dir/src/unix/udp.c.s"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/anton/Documents/afina/third-party/libuv-1.11.0/src/unix/udp.c -o CMakeFiles/uv.dir/src/unix/udp.c.s
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && /usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/src/unix/udp.c -o CMakeFiles/uv.dir/src/unix/udp.c.s
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.o.requires:
 
@@ -741,9 +741,9 @@ third-party/libuv-1.11.0/libuv.a: third-party/libuv-1.11.0/CMakeFiles/uv.dir/src
 third-party/libuv-1.11.0/libuv.a: third-party/libuv-1.11.0/CMakeFiles/uv.dir/src/unix/udp.c.o
 third-party/libuv-1.11.0/libuv.a: third-party/libuv-1.11.0/CMakeFiles/uv.dir/build.make
 third-party/libuv-1.11.0/libuv.a: third-party/libuv-1.11.0/CMakeFiles/uv.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking C static library libuv.a"
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && $(CMAKE_COMMAND) -P CMakeFiles/uv.dir/cmake_clean_target.cmake
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uv.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Linking C static library libuv.a"
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && $(CMAKE_COMMAND) -P CMakeFiles/uv.dir/cmake_clean_target.cmake
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uv.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/build: third-party/libuv-1.11.0/libuv.a
@@ -780,10 +780,10 @@ third-party/libuv-1.11.0/CMakeFiles/uv.dir/requires: third-party/libuv-1.11.0/CM
 .PHONY : third-party/libuv-1.11.0/CMakeFiles/uv.dir/requires
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/clean:
-	cd /home/anton/Documents/afina/third-party/libuv-1.11.0 && $(CMAKE_COMMAND) -P CMakeFiles/uv.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 && $(CMAKE_COMMAND) -P CMakeFiles/uv.dir/cmake_clean.cmake
 .PHONY : third-party/libuv-1.11.0/CMakeFiles/uv.dir/clean
 
 third-party/libuv-1.11.0/CMakeFiles/uv.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/third-party/libuv-1.11.0 /home/anton/Documents/afina /home/anton/Documents/afina/third-party/libuv-1.11.0 /home/anton/Documents/afina/third-party/libuv-1.11.0/CMakeFiles/uv.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0 /home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/CMakeFiles/uv.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : third-party/libuv-1.11.0/CMakeFiles/uv.dir/depend
 

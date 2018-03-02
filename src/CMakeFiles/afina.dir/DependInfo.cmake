@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton/Documents/afina/src/Version.cpp" "/home/anton/Documents/afina/src/CMakeFiles/afina.dir/Version.cpp.o"
-  "/home/anton/Documents/afina/src/main.cpp" "/home/anton/Documents/afina/src/CMakeFiles/afina.dir/main.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/Version.cpp" "/home/antonloskutov/project_c/afina/src/CMakeFiles/afina.dir/Version.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/main.cpp" "/home/antonloskutov/project_c/afina/src/CMakeFiles/afina.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -28,11 +28,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anton/Documents/afina/src/network/CMakeFiles/Network.dir/DependInfo.cmake"
-  "/home/anton/Documents/afina/src/storage/CMakeFiles/Storage.dir/DependInfo.cmake"
-  "/home/anton/Documents/afina/third-party/libuv-1.11.0/CMakeFiles/uv.dir/DependInfo.cmake"
-  "/home/anton/Documents/afina/src/protocol/CMakeFiles/Protocol.dir/DependInfo.cmake"
-  "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/network/CMakeFiles/Network.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/storage/CMakeFiles/Storage.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/third-party/libuv-1.11.0/CMakeFiles/uv.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/protocol/CMakeFiles/Protocol.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

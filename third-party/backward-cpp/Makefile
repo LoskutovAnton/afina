@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,17 +100,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: install/local
-
-.PHONY : install/local/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -122,16 +111,38 @@ test/fast: test
 
 .PHONY : test/fast
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
+
 # The main all target
 all: cmake_check_build_system
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles /home/anton/Documents/afina/third-party/backward-cpp/CMakeFiles/progress.marks
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles /home/antonloskutov/project_c/afina/third-party/backward-cpp/CMakeFiles/progress.marks
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/clean
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 third-party/backward-cpp/CMakeFiles/backward_object.dir/rule:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/CMakeFiles/backward_object.dir/rule
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/CMakeFiles/backward_object.dir/rule
 .PHONY : third-party/backward-cpp/CMakeFiles/backward_object.dir/rule
 
 # Convenience name for target.
@@ -166,12 +177,12 @@ backward_object: third-party/backward-cpp/CMakeFiles/backward_object.dir/rule
 
 # fast build rule for target.
 backward_object/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/build
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/build
 .PHONY : backward_object/fast
 
 # Convenience name for target.
 third-party/backward-cpp/CMakeFiles/backward.dir/rule:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/CMakeFiles/backward.dir/rule
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 third-party/backward-cpp/CMakeFiles/backward.dir/rule
 .PHONY : third-party/backward-cpp/CMakeFiles/backward.dir/rule
 
 # Convenience name for target.
@@ -181,7 +192,7 @@ backward: third-party/backward-cpp/CMakeFiles/backward.dir/rule
 
 # fast build rule for target.
 backward/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/build
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/build
 .PHONY : backward/fast
 
 backward.o: backward.cpp.o
@@ -190,8 +201,8 @@ backward.o: backward.cpp.o
 
 # target to build an object file
 backward.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/backward.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/backward.cpp.o
 .PHONY : backward.cpp.o
 
 backward.i: backward.cpp.i
@@ -200,8 +211,8 @@ backward.i: backward.cpp.i
 
 # target to preprocess a source file
 backward.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.i
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/backward.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/backward.cpp.i
 .PHONY : backward.cpp.i
 
 backward.s: backward.cpp.s
@@ -210,8 +221,8 @@ backward.s: backward.cpp.s
 
 # target to generate assembly for a file
 backward.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.s
-	cd /home/anton/Documents/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/backward.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward_object.dir/build.make third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f third-party/backward-cpp/CMakeFiles/backward.dir/build.make third-party/backward-cpp/CMakeFiles/backward.dir/backward.cpp.s
 .PHONY : backward.cpp.s
 
 # Help Target
@@ -224,10 +235,11 @@ help:
 	@echo "... install"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... test"
 	@echo "... backward_object"
 	@echo "... backward"
+	@echo "... install/strip"
 	@echo "... install/local"
-	@echo "... test"
 	@echo "... backward.o"
 	@echo "... backward.i"
 	@echo "... backward.s"
@@ -242,6 +254,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

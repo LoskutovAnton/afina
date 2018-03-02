@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include test/protocol/CMakeFiles/runProtocolTests.dir/depend.make
@@ -59,16 +59,16 @@ include test/protocol/CMakeFiles/runProtocolTests.dir/flags.make
 
 test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o: test/protocol/CMakeFiles/runProtocolTests.dir/flags.make
 test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o: test/protocol/MemcachedParserTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o"
-	cd /home/anton/Documents/afina/test/protocol && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o -c /home/anton/Documents/afina/test/protocol/MemcachedParserTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o"
+	cd /home/antonloskutov/project_c/afina/test/protocol && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o -c /home/antonloskutov/project_c/afina/test/protocol/MemcachedParserTest.cpp
 
 test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.i"
-	cd /home/anton/Documents/afina/test/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/test/protocol/MemcachedParserTest.cpp > CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.i
+	cd /home/antonloskutov/project_c/afina/test/protocol && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/test/protocol/MemcachedParserTest.cpp > CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.i
 
 test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.s"
-	cd /home/anton/Documents/afina/test/protocol && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/test/protocol/MemcachedParserTest.cpp -o CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.s
+	cd /home/antonloskutov/project_c/afina/test/protocol && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/test/protocol/MemcachedParserTest.cpp -o CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.s
 
 test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o.requires:
 
@@ -87,7 +87,7 @@ runProtocolTests_OBJECTS = \
 
 # External object files for target runProtocolTests
 runProtocolTests_EXTERNAL_OBJECTS = \
-"/home/anton/Documents/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
+"/home/antonloskutov/project_c/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
 
 test/protocol/runProtocolTests: test/protocol/CMakeFiles/runProtocolTests.dir/MemcachedParserTest.cpp.o
 test/protocol/runProtocolTests: third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o
@@ -96,12 +96,32 @@ test/protocol/runProtocolTests: src/protocol/libProtocol.a
 test/protocol/runProtocolTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 test/protocol/runProtocolTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a
 test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/protocol/runProtocolTests: src/execute/libExecute.a
 test/protocol/runProtocolTests: src/storage/libStorage.a
 test/protocol/runProtocolTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 test/protocol/runProtocolTests: test/protocol/CMakeFiles/runProtocolTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runProtocolTests"
-	cd /home/anton/Documents/afina/test/protocol && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runProtocolTests.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runProtocolTests"
+	cd /home/antonloskutov/project_c/afina/test/protocol && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runProtocolTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/protocol/CMakeFiles/runProtocolTests.dir/build: test/protocol/runProtocolTests
@@ -113,10 +133,10 @@ test/protocol/CMakeFiles/runProtocolTests.dir/requires: test/protocol/CMakeFiles
 .PHONY : test/protocol/CMakeFiles/runProtocolTests.dir/requires
 
 test/protocol/CMakeFiles/runProtocolTests.dir/clean:
-	cd /home/anton/Documents/afina/test/protocol && $(CMAKE_COMMAND) -P CMakeFiles/runProtocolTests.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/test/protocol && $(CMAKE_COMMAND) -P CMakeFiles/runProtocolTests.dir/cmake_clean.cmake
 .PHONY : test/protocol/CMakeFiles/runProtocolTests.dir/clean
 
 test/protocol/CMakeFiles/runProtocolTests.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/test/protocol /home/anton/Documents/afina /home/anton/Documents/afina/test/protocol /home/anton/Documents/afina/test/protocol/CMakeFiles/runProtocolTests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/test/protocol /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/test/protocol /home/antonloskutov/project_c/afina/test/protocol/CMakeFiles/runProtocolTests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/protocol/CMakeFiles/runProtocolTests.dir/depend
 

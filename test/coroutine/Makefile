@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -89,6 +89,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -99,6 +110,17 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
 
 # Special rule for the target test
 test:
@@ -111,27 +133,16 @@ test/fast: test
 
 .PHONY : test/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
-
 # The main all target
 all: cmake_check_build_system
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles /home/anton/Documents/afina/test/coroutine/CMakeFiles/progress.marks
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton/Documents/afina/CMakeFiles 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles /home/antonloskutov/project_c/afina/test/coroutine/CMakeFiles/progress.marks
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/antonloskutov/project_c/afina/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/clean
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/clean
 .PHONY : clean
 
 # The main clean target
@@ -141,22 +152,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/preinstall
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/coroutine/CMakeFiles/runCoroutineTests.dir/rule:
-	cd /home/anton/Documents/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/CMakeFiles/runCoroutineTests.dir/rule
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f CMakeFiles/Makefile2 test/coroutine/CMakeFiles/runCoroutineTests.dir/rule
 .PHONY : test/coroutine/CMakeFiles/runCoroutineTests.dir/rule
 
 # Convenience name for target.
@@ -166,7 +177,7 @@ runCoroutineTests: test/coroutine/CMakeFiles/runCoroutineTests.dir/rule
 
 # fast build rule for target.
 runCoroutineTests/fast:
-	cd /home/anton/Documents/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/build
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/build
 .PHONY : runCoroutineTests/fast
 
 EngineTest.o: EngineTest.cpp.o
@@ -175,7 +186,7 @@ EngineTest.o: EngineTest.cpp.o
 
 # target to build an object file
 EngineTest.cpp.o:
-	cd /home/anton/Documents/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o
 .PHONY : EngineTest.cpp.o
 
 EngineTest.i: EngineTest.cpp.i
@@ -184,7 +195,7 @@ EngineTest.i: EngineTest.cpp.i
 
 # target to preprocess a source file
 EngineTest.cpp.i:
-	cd /home/anton/Documents/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.i
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.i
 .PHONY : EngineTest.cpp.i
 
 EngineTest.s: EngineTest.cpp.s
@@ -193,7 +204,7 @@ EngineTest.s: EngineTest.cpp.s
 
 # target to generate assembly for a file
 EngineTest.cpp.s:
-	cd /home/anton/Documents/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.s
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f test/coroutine/CMakeFiles/runCoroutineTests.dir/build.make test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.s
 .PHONY : EngineTest.cpp.s
 
 # Help Target
@@ -205,10 +216,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... install"
 	@echo "... rebuild_cache"
+	@echo "... edit_cache"
 	@echo "... runCoroutineTests"
 	@echo "... install/local"
+	@echo "... install/strip"
 	@echo "... test"
-	@echo "... edit_cache"
 	@echo "... EngineTest.o"
 	@echo "... EngineTest.i"
 	@echo "... EngineTest.s"
@@ -223,6 +235,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

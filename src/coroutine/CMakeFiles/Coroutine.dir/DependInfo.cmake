@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton/Documents/afina/src/coroutine/Engine.cpp" "/home/anton/Documents/afina/src/coroutine/CMakeFiles/Coroutine.dir/Engine.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/coroutine/Engine.cpp" "/home/antonloskutov/project_c/afina/src/coroutine/CMakeFiles/Coroutine.dir/Engine.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

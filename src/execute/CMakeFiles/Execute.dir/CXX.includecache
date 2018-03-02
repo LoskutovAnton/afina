@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/src/execute/Add.cpp
+/home/antonloskutov/project_c/afina/src/execute/Add.cpp
 afina/Storage.h
 -
 afina/execute/Add.h
@@ -14,7 +14,7 @@ afina/execute/Add.h
 iostream
 -
 
-/home/anton/Documents/afina/src/execute/Append.cpp
+/home/antonloskutov/project_c/afina/src/execute/Append.cpp
 afina/Storage.h
 -
 afina/execute/Append.h
@@ -22,11 +22,11 @@ afina/execute/Append.h
 iostream
 -
 
-/home/anton/Documents/afina/src/execute/Command.cpp
+/home/antonloskutov/project_c/afina/src/execute/Command.cpp
 afina/execute/Command.h
 -
 
-/home/anton/Documents/afina/src/execute/Get.cpp
+/home/antonloskutov/project_c/afina/src/execute/Get.cpp
 afina/Storage.h
 -
 afina/execute/Get.h
@@ -38,7 +38,7 @@ iterator
 sstream
 -
 
-/home/anton/Documents/afina/src/execute/Replace.cpp
+/home/antonloskutov/project_c/afina/src/execute/Replace.cpp
 afina/Storage.h
 -
 afina/execute/Replace.h
@@ -46,7 +46,7 @@ afina/execute/Replace.h
 iostream
 -
 
-/home/anton/Documents/afina/src/execute/Set.cpp
+/home/antonloskutov/project_c/afina/src/execute/Set.cpp
 afina/Storage.h
 -
 afina/execute/Set.h
@@ -54,7 +54,7 @@ afina/execute/Set.h
 iostream
 -
 
-/home/anton/Documents/afina/src/execute/Stats.cpp
+/home/antonloskutov/project_c/afina/src/execute/Stats.cpp
 afina/Storage.h
 -
 afina/execute/Stats.h

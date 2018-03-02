@@ -1,4 +1,4 @@
-# Install script for directory: /home/anton/Documents/afina/test
+# Install script for directory: /home/antonloskutov/project_c/afina/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/anton/Documents/afina/test/allocator/cmake_install.cmake")
-  include("/home/anton/Documents/afina/test/coroutine/cmake_install.cmake")
-  include("/home/anton/Documents/afina/test/execute/cmake_install.cmake")
-  include("/home/anton/Documents/afina/test/protocol/cmake_install.cmake")
-  include("/home/anton/Documents/afina/test/network/cmake_install.cmake")
-  include("/home/anton/Documents/afina/test/storage/cmake_install.cmake")
+  include("/home/antonloskutov/project_c/afina/test/allocator/cmake_install.cmake")
+  include("/home/antonloskutov/project_c/afina/test/coroutine/cmake_install.cmake")
+  include("/home/antonloskutov/project_c/afina/test/execute/cmake_install.cmake")
+  include("/home/antonloskutov/project_c/afina/test/protocol/cmake_install.cmake")
+  include("/home/antonloskutov/project_c/afina/test/network/cmake_install.cmake")
+  include("/home/antonloskutov/project_c/afina/test/storage/cmake_install.cmake")
 
 endif()
 

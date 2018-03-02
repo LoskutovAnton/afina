@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton/Documents/afina
+CMAKE_SOURCE_DIR = /home/antonloskutov/project_c/afina
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton/Documents/afina
+CMAKE_BINARY_DIR = /home/antonloskutov/project_c/afina
 
 # Include any dependencies generated for this target.
 include test/coroutine/CMakeFiles/runCoroutineTests.dir/depend.make
@@ -59,16 +59,16 @@ include test/coroutine/CMakeFiles/runCoroutineTests.dir/flags.make
 
 test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o: test/coroutine/CMakeFiles/runCoroutineTests.dir/flags.make
 test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o: test/coroutine/EngineTest.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o"
-	cd /home/anton/Documents/afina/test/coroutine && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o -c /home/anton/Documents/afina/test/coroutine/EngineTest.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o"
+	cd /home/antonloskutov/project_c/afina/test/coroutine && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o -c /home/antonloskutov/project_c/afina/test/coroutine/EngineTest.cpp
 
 test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.i"
-	cd /home/anton/Documents/afina/test/coroutine && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/anton/Documents/afina/test/coroutine/EngineTest.cpp > CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.i
+	cd /home/antonloskutov/project_c/afina/test/coroutine && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/test/coroutine/EngineTest.cpp > CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.i
 
 test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.s"
-	cd /home/anton/Documents/afina/test/coroutine && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/anton/Documents/afina/test/coroutine/EngineTest.cpp -o CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.s
+	cd /home/antonloskutov/project_c/afina/test/coroutine && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/test/coroutine/EngineTest.cpp -o CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.s
 
 test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o.requires:
 
@@ -87,7 +87,7 @@ runCoroutineTests_OBJECTS = \
 
 # External object files for target runCoroutineTests
 runCoroutineTests_EXTERNAL_OBJECTS = \
-"/home/anton/Documents/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
+"/home/antonloskutov/project_c/afina/third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o"
 
 test/coroutine/runCoroutineTests: test/coroutine/CMakeFiles/runCoroutineTests.dir/EngineTest.cpp.o
 test/coroutine/runCoroutineTests: third-party/backward-cpp/CMakeFiles/backward_object.dir/backward.cpp.o
@@ -96,10 +96,30 @@ test/coroutine/runCoroutineTests: src/coroutine/libCoroutine.a
 test/coroutine/runCoroutineTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 test/coroutine/runCoroutineTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest_main.a
 test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/coroutine/runCoroutineTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/coroutine/runCoroutineTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest.a
 test/coroutine/runCoroutineTests: test/coroutine/CMakeFiles/runCoroutineTests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/anton/Documents/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runCoroutineTests"
-	cd /home/anton/Documents/afina/test/coroutine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runCoroutineTests.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable runCoroutineTests"
+	cd /home/antonloskutov/project_c/afina/test/coroutine && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/runCoroutineTests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/coroutine/CMakeFiles/runCoroutineTests.dir/build: test/coroutine/runCoroutineTests
@@ -111,10 +131,10 @@ test/coroutine/CMakeFiles/runCoroutineTests.dir/requires: test/coroutine/CMakeFi
 .PHONY : test/coroutine/CMakeFiles/runCoroutineTests.dir/requires
 
 test/coroutine/CMakeFiles/runCoroutineTests.dir/clean:
-	cd /home/anton/Documents/afina/test/coroutine && $(CMAKE_COMMAND) -P CMakeFiles/runCoroutineTests.dir/cmake_clean.cmake
+	cd /home/antonloskutov/project_c/afina/test/coroutine && $(CMAKE_COMMAND) -P CMakeFiles/runCoroutineTests.dir/cmake_clean.cmake
 .PHONY : test/coroutine/CMakeFiles/runCoroutineTests.dir/clean
 
 test/coroutine/CMakeFiles/runCoroutineTests.dir/depend:
-	cd /home/anton/Documents/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/anton/Documents/afina /home/anton/Documents/afina/test/coroutine /home/anton/Documents/afina /home/anton/Documents/afina/test/coroutine /home/anton/Documents/afina/test/coroutine/CMakeFiles/runCoroutineTests.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/antonloskutov/project_c/afina && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/test/coroutine /home/antonloskutov/project_c/afina /home/antonloskutov/project_c/afina/test/coroutine /home/antonloskutov/project_c/afina/test/coroutine/CMakeFiles/runCoroutineTests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/coroutine/CMakeFiles/runCoroutineTests.dir/depend
 

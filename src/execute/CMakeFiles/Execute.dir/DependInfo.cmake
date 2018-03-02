@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton/Documents/afina/src/execute/Add.cpp" "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/Add.cpp.o"
-  "/home/anton/Documents/afina/src/execute/Append.cpp" "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/Append.cpp.o"
-  "/home/anton/Documents/afina/src/execute/Command.cpp" "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/Command.cpp.o"
-  "/home/anton/Documents/afina/src/execute/Get.cpp" "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/Get.cpp.o"
-  "/home/anton/Documents/afina/src/execute/Replace.cpp" "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/Replace.cpp.o"
-  "/home/anton/Documents/afina/src/execute/Set.cpp" "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/Set.cpp.o"
-  "/home/anton/Documents/afina/src/execute/Stats.cpp" "/home/anton/Documents/afina/src/execute/CMakeFiles/Execute.dir/Stats.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/execute/Add.cpp" "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/Add.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/execute/Append.cpp" "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/Append.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/execute/Command.cpp" "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/Command.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/execute/Get.cpp" "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/Get.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/execute/Replace.cpp" "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/Replace.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/execute/Set.cpp" "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/Set.cpp.o"
+  "/home/antonloskutov/project_c/afina/src/execute/Stats.cpp" "/home/antonloskutov/project_c/afina/src/execute/CMakeFiles/Execute.dir/Stats.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -22,7 +22,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/anton/Documents/afina/src/storage/CMakeFiles/Storage.dir/DependInfo.cmake"
+  "/home/antonloskutov/project_c/afina/src/storage/CMakeFiles/Storage.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

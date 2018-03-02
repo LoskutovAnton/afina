@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/test/allocator/SimpleTest.cpp
+/home/antonloskutov/project_c/afina/test/allocator/SimpleTest.cpp
 gtest/gtest.h
-/home/anton/Documents/afina/test/allocator/gtest/gtest.h
+/home/antonloskutov/project_c/afina/test/allocator/gtest/gtest.h
 iostream
 -
 set

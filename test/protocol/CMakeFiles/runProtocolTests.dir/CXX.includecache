@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/test/protocol/MemcachedParserTest.cpp
+/home/antonloskutov/project_c/afina/test/protocol/MemcachedParserTest.cpp
 gtest/gtest.h
 -
 memory

@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/anton/Documents/afina/test
-# Build directory: /home/anton/Documents/afina/test
+# Source directory: /home/antonloskutov/project_c/afina/test
+# Build directory: /home/antonloskutov/project_c/afina/test
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

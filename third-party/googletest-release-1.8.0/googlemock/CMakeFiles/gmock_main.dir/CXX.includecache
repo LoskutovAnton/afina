@@ -6,47 +6,47 @@
 
 #IncludeRegexTransform: 
 
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock-all.cc
 gmock/gmock.h
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock/gmock.h
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock/gmock.h
 src/gmock-cardinalities.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-cardinalities.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-cardinalities.cc
 src/gmock-internal-utils.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-internal-utils.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-internal-utils.cc
 src/gmock-matchers.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-matchers.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-matchers.cc
 src/gmock-spec-builders.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-spec-builders.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock-spec-builders.cc
 src/gmock.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/src/gmock.cc
 
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock_main.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock_main.cc
 iostream
 -
 gmock/gmock.h
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock/gmock.h
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gmock/gmock.h
 gtest/gtest.h
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googlemock/src/gtest/gtest.h
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googlemock/src/gtest/gtest.h
 tchar.h
 -
 
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/gtest-all.cc
 gtest/gtest.h
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/gtest/gtest.h
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/gtest/gtest.h
 src/gtest.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest.cc
 src/gtest-death-test.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-death-test.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-death-test.cc
 src/gtest-filepath.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-filepath.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-filepath.cc
 src/gtest-port.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-port.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-port.cc
 src/gtest-printers.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-printers.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-printers.cc
 src/gtest-test-part.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-test-part.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-test-part.cc
 src/gtest-typed-test.cc
-/home/anton/Documents/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-typed-test.cc
+/home/antonloskutov/project_c/afina/third-party/googletest-release-1.8.0/googletest/src/src/gtest-typed-test.cc
 
 third-party/googletest-release-1.8.0/googlemock/include/gmock/gmock-actions.h
 errno.h
