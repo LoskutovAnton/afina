@@ -4,6 +4,7 @@
 #include <map>
 #include <mutex>
 #include <string>
+#include <list>
 
 #include <afina/Storage.h>
 
@@ -37,7 +38,9 @@ public:
 
 private:
     size_t _max_size;
+    size_t _size;
     std::map<std::string, std::string> _backend;
+    mutable std::list<std::string> _cache;
 };
 
 } // namespace Backend

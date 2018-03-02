@@ -1,0 +1,2 @@
+/usr/bin/ar qc libNetwork.a  CMakeFiles/Network.dir/uv/ServerImpl.cpp.o CMakeFiles/Network.dir/uv/Worker.cpp.o CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o CMakeFiles/Network.dir/nonblocking/Worker.cpp.o CMakeFiles/Network.dir/nonblocking/Utils.cpp.o
+/usr/bin/ranlib libNetwork.a
