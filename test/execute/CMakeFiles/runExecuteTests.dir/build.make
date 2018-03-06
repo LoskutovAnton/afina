@@ -91,6 +91,9 @@ test/execute/runExecuteTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/execute/runExecuteTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/execute/runExecuteTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/execute/runExecuteTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/execute/runExecuteTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/execute/runExecuteTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/execute/runExecuteTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/execute/runExecuteTests: src/storage/libStorage.a
 test/execute/runExecuteTests: test/execute/CMakeFiles/runExecuteTests.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Linking CXX executable runExecuteTests"

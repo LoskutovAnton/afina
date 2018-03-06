@@ -16,6 +16,29 @@ namespace Backend {
  *
  *
  */
+ struct Node {
+    Node* prev;
+    Node* next;
+    std::string first;
+    std::string second;
+ };
+
+ class List {
+ public:
+    List();
+    ~List();
+    Node* front();
+    Node* back();
+    void pop_back();
+    void push_front(std::string first, std::string second);
+    void erase(Node* node);
+    void to_front(Node* new_front);
+
+ private:
+    Node* _front;
+    Node* _back;
+ };
+
 class MapBasedGlobalLockImpl : public Afina::Storage {
 public:
     MapBasedGlobalLockImpl(size_t max_size = 1024) : _max_size(max_size), _size(0) {}
@@ -42,10 +65,10 @@ private:
     mutable std::mutex _lock;
 
     std::unordered_map< std::reference_wrapper<const std::string>,
-                        std::list<std::pair<const std::string, std::string>>::const_iterator,
+                        Node*,
                         std::hash<std::string>,
                         std::equal_to<std::string>> _backend;
-    mutable std::list<std::pair<const std::string, std::string>> _cache;
+    mutable List _cache;
 };
 
 } // namespace Backend
