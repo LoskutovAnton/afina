@@ -9,6 +9,8 @@
 /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.cpp
 ServerImpl.h
 /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.h
+../../protocol/Parser.h
+/home/antonloskutov/project_c/afina/src/protocol/Parser.h
 cassert
 -
 cstring
@@ -18,6 +20,10 @@ iostream
 memory
 -
 stdexcept
+-
+sstream
+-
+algorithm
 -
 pthread.h
 -
@@ -36,6 +42,8 @@ netinet/in.h
 unistd.h
 -
 afina/Storage.h
+-
+afina/execute/Command.h
 -
 
 /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.h
@@ -186,6 +194,18 @@ vector
 afina/execute/Command.h
 -
 protocol/Parser.h
+-
+
+/home/antonloskutov/project_c/afina/src/protocol/Parser.h
+memory
+-
+string
+-
+vector
+-
+cstddef
+-
+cstdint
 -
 
 include/afina/Storage.h

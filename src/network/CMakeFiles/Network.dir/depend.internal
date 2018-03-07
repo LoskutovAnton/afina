@@ -4,7 +4,9 @@
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o
  /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.cpp
  /home/antonloskutov/project_c/afina/src/network/blocking/ServerImpl.h
+ /home/antonloskutov/project_c/afina/src/protocol/Parser.h
  include/afina/Storage.h
+ include/afina/execute/Command.h
  include/afina/network/Server.h
 src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o
  /home/antonloskutov/project_c/afina/src/network/nonblocking/ServerImpl.cpp

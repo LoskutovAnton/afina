@@ -3,7 +3,9 @@
 
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: src/network/blocking/ServerImpl.cpp
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: src/network/blocking/ServerImpl.h
+src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: src/protocol/Parser.h
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: include/afina/Storage.h
+src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: include/afina/execute/Command.h
 src/network/CMakeFiles/Network.dir/blocking/ServerImpl.cpp.o: include/afina/network/Server.h
 
 src/network/CMakeFiles/Network.dir/nonblocking/ServerImpl.cpp.o: src/network/nonblocking/ServerImpl.cpp
