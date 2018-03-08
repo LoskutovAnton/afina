@@ -43,11 +43,11 @@ protected:
     void RunConnection(int);
 
 private:
-    static const ssize_t BUF_SIZE = 2;
+    static const ssize_t BUF_SIZE = 10;
 
     static void *RunAcceptorProxy(void *p);
 
-    using RunConnectionProxyArgs = std::tuple<ServerImpl *, int>;
+    using RunConnectionProxyArgs = std::pair<ServerImpl *, int>;
     static void *RunConnectionProxy(void *p);
 
     // Atomic flag to notify threads when it is time to stop. Note that
@@ -79,11 +79,6 @@ private:
     // Threads that are processing connection data, permits
     // access only from inside of accept_thread
     std::unordered_set<pthread_t> connections;
-    /*
-    static std::string ReadData(int, char[], ssize_t &, ssize_t);
-
-    static void RemovePrefix(char[], size_t &, ssize_t &);
-    */
 };
 
 } // namespace Blocking

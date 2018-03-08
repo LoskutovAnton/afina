@@ -38,11 +38,9 @@ void *ServerImpl::RunAcceptorProxy(void *p) {
 }
 
 void *ServerImpl::RunConnectionProxy(void *p) {
-    ServerImpl *srv;
-    int client_socket;
-
     auto args = reinterpret_cast<RunConnectionProxyArgs *>(p);
-    std::tie(srv, client_socket) = *args;
+    ServerImpl *srv = args->first;
+    int client_socket = args->second;
     delete args;
 
     try {
@@ -53,7 +51,7 @@ void *ServerImpl::RunConnectionProxy(void *p) {
 
     {
         close(client_socket);
-        std::unique_lock<std::mutex> lock(srv->connections_mutex);
+        std::lock_guard<std::mutex> lock(srv->connections_mutex);
         srv->connections.erase(pthread_self());
         srv->connections_cv.notify_all();
     }
@@ -235,66 +233,44 @@ void ServerImpl::RunConnection(int client_socket) {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     char buf[BUF_SIZE];
     Protocol::Parser parser;
-
+    std::string str_buf;
     uint32_t buf_readed;
-
-    while ((buf_readed = recv(client_socket, buf, BUF_SIZE, 0)) > 0) {
-        uint32_t body_size;
-
-        size_t parsed;
-        while (parser.Parse(buf, buf_readed, parsed)) {
-            for (ssize_t i = 0; i < buf_readed - parsed; ++i) {
-                buf[i] = buf[i + parsed];
-            }
-
-            buf_readed -= parsed;
-            parsed = 0;
-
-            auto command = parser.Build(body_size);
-            std::stringbuf sbuf;
-
-            while (body_size > 0) {
-                size_t body_readed = std::min(buf_readed, body_size);
-                sbuf.sputn(buf, body_readed);
-
-                body_size -= body_readed;
-
-                for (ssize_t i = 0; i < buf_readed - body_readed; ++i) {
-                    buf[i] = buf[i + body_readed];
-                }
-
-                buf_readed -= body_readed;
-
-                buf_readed = recv(client_socket, buf, BUF_SIZE, 0);
-
-                if ((body_size > 0) && (buf_readed <= 0)) {
-                    throw std::runtime_error("Socket recv() failed");
-                }
-            }
-
-            std::string out;
-
-            try {
-                command->Execute(*pStorage, sbuf.str(), out);
-                out += "\r\n";
-            } catch (std::runtime_error &ex) {
-                out = std::string("SERVER_ERROR ") + ex.what() + "\r\n";
-            }
-
-            if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
-                throw std::runtime_error("Socket send() failed");
-            }
-
-            parser.Reset();
-
-            if (!running.load()) {
-                break;
-            }
-        }
-    }
+    
+    do {
+      buf_readed = recv(client_socket, buf, BUF_SIZE, 0);
+      str_buf += buf;
+    } while(buf_readed > 0);
 
     if (buf_readed == -1) {
-        throw std::runtime_error("Socket recv() failed");
+      throw std::runtime_error("Socket recv() failed");
+    }
+
+    uint32_t body_size;
+    size_t parsed;
+    if (parser.Parse(str_buf, parsed))
+    {
+      auto command = parser.Build(body_size);
+      std::string str_command(str_buf, parsed, body_size);
+      std::string out;
+
+      try {
+          command->Execute(*pStorage, str_command, out);
+          out += "\r\n";
+      } catch (std::runtime_error &ex) {
+          out = std::string("SERVER_ERROR ") + ex.what() + "\r\n";
+      }
+
+      if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
+          throw std::runtime_error("Socket send() failed");
+      }
+
+      parser.Reset();
+
+      if (!running.load()) {
+          return;
+      }
+    } else {
+      throw std::runtime_error("Command not ended");
     }
 }
 
