@@ -235,10 +235,10 @@ void ServerImpl::RunConnection(int client_socket) {
     Protocol::Parser parser;
     std::string str_buf;
     uint32_t buf_readed;
-    
+
     do {
       buf_readed = recv(client_socket, buf, BUF_SIZE, 0);
-      str_buf += buf;
+      str_buf.append(buf, buf_readed);
     } while(buf_readed > 0);
 
     if (buf_readed == -1) {
