@@ -14,7 +14,13 @@ compile_commands.json
 cquery_log.txt
 
 # CMAKE files
+/CMakeFiles
 CMakeCache.txt
 Makefile
 cmake_install.cmake
 CTestTestfile.cmake
+**/CMakeCache.txt
+**/Makefile
+**/cmake_install.cmake
+**/CTestTestfile.cmake
+build.sh

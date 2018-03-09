@@ -116,14 +116,19 @@ void ServerImpl::Start(uint32_t port, uint16_t n_workers) {
 // See Server.h
 void ServerImpl::Stop() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
-    shutdown(server_socket, SHUT_RDWR);
     running.store(false);
+    shutdown(server_socket, SHUT_RDWR);
 }
 
 // See Server.h
 void ServerImpl::Join() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
-    pthread_join(accept_thread, 0);
+    pthread_join(accept_thread, NULL);
+
+    std::unique_lock<std::mutex> lock(connections_mutex);
+    while(!connections.empty()){
+      connections_cv.wait(lock);
+    }
 }
 
 // See Server.h
@@ -205,23 +210,11 @@ void ServerImpl::RunAcceptor() {
               auto args = new RunConnectionProxyArgs(this, client_socket);
               pthread_t worker;
               if (pthread_create(&worker, NULL, ServerImpl::RunConnectionProxy, args) < 0) {
-                  throw std::runtime_error("Could not create server thread");
+                close(client_socket);
+                throw std::runtime_error("Could not create server thread");
               }
-
-              connections.insert(worker);
             }
         }
-
-        // TODO: Start new thread and process data from/to connection
-        /*{
-            std::string msg = "TODO: start new thread and process memcached protocol instead";
-            if (send(client_socket, msg.data(), msg.size(), 0) <= 0) {
-                close(client_socket);
-                close(server_socket);
-                throw std::runtime_error("Socket send() failed");
-            }
-            close(client_socket);
-        }*/
     }
 
     // Cleanup on exit...
@@ -231,6 +224,13 @@ void ServerImpl::RunAcceptor() {
 // See Server.h
 void ServerImpl::RunConnection(int client_socket) {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
+
+    pthread_t self_id = pthread_self();
+    {
+      std::lock_guard<std::mutex> lock(connections_mutex);
+      connections.insert(self_id);
+    }
+
     char buf[BUF_SIZE];
     Protocol::Parser parser;
     std::string str_buf;
@@ -241,12 +241,21 @@ void ServerImpl::RunConnection(int client_socket) {
       str_buf.append(buf, buf_readed);
     } while(buf_readed > 0);
 
-    if (buf_readed == -1) {
-      throw std::runtime_error("Socket recv() failed");
+    if ((!running.load()) || (buf_readed == -1))
+    {
+      std::cout << "running stop " << buf_readed << "\n";
+      pthread_t self_id = pthread_self();
+      close(client_socket);
+
+      std::lock_guard<std::mutex> lock(connections_mutex);
+      connections.erase(self_id);
+      connections_cv.notify_all();
+
+      pthread_exit(nullptr);
     }
 
-    uint32_t body_size;
-    size_t parsed;
+    uint32_t body_size = 0;
+    size_t parsed = 0;
     if (parser.Parse(str_buf, parsed))
     {
       auto command = parser.Build(body_size);
@@ -254,23 +263,16 @@ void ServerImpl::RunConnection(int client_socket) {
       std::string out;
 
       try {
-          command->Execute(*pStorage, str_command, out);
-          out += "\r\n";
+        command->Execute(*pStorage, str_command, out);
+        out += "\r\n";
       } catch (std::runtime_error &ex) {
-          out = std::string("SERVER_ERROR ") + ex.what() + "\r\n";
+        out = std::string("SERVER_ERROR ") + ex.what() + "\r\n";
       }
 
       if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
-          throw std::runtime_error("Socket send() failed");
+        throw std::runtime_error("Socket send() failed");
       }
-
       parser.Reset();
-
-      if (!running.load()) {
-          return;
-      }
-    } else {
-      throw std::runtime_error("Command not ended");
     }
 }
 
