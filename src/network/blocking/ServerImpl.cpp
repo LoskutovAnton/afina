@@ -156,7 +156,7 @@ void ServerImpl::RunAcceptor() {
     // - Family: IPv4
     // - Type: Full-duplex stream (reliable)
     // - Protocol: TCP
-    int server_socket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
+    server_socket = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     if (server_socket == -1) {
         throw std::runtime_error("Failed to open socket");
     }
@@ -200,7 +200,7 @@ void ServerImpl::RunAcceptor() {
         // When an incoming connection arrives, accept it. The call to accept() blocks until
         // the incoming connection arrives
         if ((client_socket = accept(server_socket, (struct sockaddr *)&client_addr, &sinSize)) == -1) {
-            close(client_socket); //server_socket
+            close(server_socket);
             throw std::runtime_error("Socket accept() failed");
         }
 
@@ -223,7 +223,7 @@ void ServerImpl::RunAcceptor() {
             }
         }
     }
-
+    std::cout << "ended run acceptor\n";
     // Cleanup on exit...
     close(server_socket);
 }

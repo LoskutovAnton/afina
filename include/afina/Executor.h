@@ -63,7 +63,7 @@ public:
             return false;
         }
 
-        if (threads.size() < high_watermark)
+        if (tasks.size() < high_watermark)
         {
             threads.emplace_back(perform, this);
         }

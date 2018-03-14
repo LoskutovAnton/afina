@@ -26,6 +26,7 @@ void Executor::Stop(bool await) {
     }
 
     empty_condition.notify_all();
+    std::cout << "size: " << threads.size() << '\n';
     if (await) {
         for (size_t i = 0; i < threads.size(); i++) {
             if (threads[i].joinable())
@@ -56,7 +57,7 @@ void perform(Executor *executor) {
                 executor->empty_condition.wait(lock);
             }
 
-            if (executor->empty_condition.wait_for(lock, executor->idle_time, [&executor]() {return executor->tasks.empty() || executor->state == Executor::State::kStopping;}))
+            if (executor->empty_condition.wait_for(lock, executor->idle_time, [&executor]() {return (executor->tasks.empty() || executor->state == Executor::State::kStopping);}))
             {
                 if (executor->threads.size() > executor->low_watermark)
                 {
@@ -64,6 +65,7 @@ void perform(Executor *executor) {
                     {
                         if (executor->threads[i].get_id() == std::this_thread::get_id())
                         {
+                            executor->threads[i].detach();
                             executor->threads.erase(executor->threads.begin() + i);
                             break;
                         }
@@ -72,7 +74,7 @@ void perform(Executor *executor) {
                 return;
             }
 
-            if (executor->state == Executor::State::kStopped || executor->tasks.empty())
+            if (executor->state == Executor::State::kStopped)
             {
                 return;
             }
