@@ -16,6 +16,9 @@ src/execute/CMakeFiles/Execute.dir/Append.cpp.o
 src/execute/CMakeFiles/Execute.dir/Command.cpp.o
  /home/antonloskutov/project_c/afina/src/execute/Command.cpp
  include/afina/execute/Command.h
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o
+ /home/antonloskutov/project_c/afina/include/afina/Executor.h
+ /home/antonloskutov/project_c/afina/src/execute/Executor.cpp
 src/execute/CMakeFiles/Execute.dir/Get.cpp.o
  /home/antonloskutov/project_c/afina/src/execute/Get.cpp
  include/afina/Storage.h

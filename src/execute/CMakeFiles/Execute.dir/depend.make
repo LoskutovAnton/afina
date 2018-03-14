@@ -16,6 +16,9 @@ src/execute/CMakeFiles/Execute.dir/Append.cpp.o: include/afina/execute/InsertCom
 src/execute/CMakeFiles/Execute.dir/Command.cpp.o: src/execute/Command.cpp
 src/execute/CMakeFiles/Execute.dir/Command.cpp.o: include/afina/execute/Command.h
 
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o: include/afina/Executor.h
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o: src/execute/Executor.cpp
+
 src/execute/CMakeFiles/Execute.dir/Get.cpp.o: src/execute/Get.cpp
 src/execute/CMakeFiles/Execute.dir/Get.cpp.o: include/afina/Storage.h
 src/execute/CMakeFiles/Execute.dir/Get.cpp.o: include/afina/execute/Command.h

@@ -132,6 +132,13 @@ test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
+test/protocol/runProtocolTests: /usr/lib/x86_64-linux-gnu/libdw.so
 test/protocol/runProtocolTests: src/execute/libExecute.a
 test/protocol/runProtocolTests: src/storage/libStorage.a
 test/protocol/runProtocolTests: third-party/googletest-release-1.8.0/googlemock/gtest/libgtest.a

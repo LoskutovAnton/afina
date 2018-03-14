@@ -225,6 +225,30 @@ src/execute/CMakeFiles/Execute.dir/Stats.cpp.o.provides: src/execute/CMakeFiles/
 src/execute/CMakeFiles/Execute.dir/Stats.cpp.o.provides.build: src/execute/CMakeFiles/Execute.dir/Stats.cpp.o
 
 
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o: src/execute/CMakeFiles/Execute.dir/flags.make
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o: src/execute/Executor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/execute/CMakeFiles/Execute.dir/Executor.cpp.o"
+	cd /home/antonloskutov/project_c/afina/src/execute && /usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Execute.dir/Executor.cpp.o -c /home/antonloskutov/project_c/afina/src/execute/Executor.cpp
+
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Execute.dir/Executor.cpp.i"
+	cd /home/antonloskutov/project_c/afina/src/execute && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/antonloskutov/project_c/afina/src/execute/Executor.cpp > CMakeFiles/Execute.dir/Executor.cpp.i
+
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Execute.dir/Executor.cpp.s"
+	cd /home/antonloskutov/project_c/afina/src/execute && /usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/antonloskutov/project_c/afina/src/execute/Executor.cpp -o CMakeFiles/Execute.dir/Executor.cpp.s
+
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.requires:
+
+.PHONY : src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.requires
+
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.provides: src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.requires
+	$(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.provides.build
+.PHONY : src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.provides
+
+src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.provides.build: src/execute/CMakeFiles/Execute.dir/Executor.cpp.o
+
+
 # Object files for target Execute
 Execute_OBJECTS = \
 "CMakeFiles/Execute.dir/Command.cpp.o" \
@@ -233,7 +257,8 @@ Execute_OBJECTS = \
 "CMakeFiles/Execute.dir/Get.cpp.o" \
 "CMakeFiles/Execute.dir/Set.cpp.o" \
 "CMakeFiles/Execute.dir/Replace.cpp.o" \
-"CMakeFiles/Execute.dir/Stats.cpp.o"
+"CMakeFiles/Execute.dir/Stats.cpp.o" \
+"CMakeFiles/Execute.dir/Executor.cpp.o"
 
 # External object files for target Execute
 Execute_EXTERNAL_OBJECTS =
@@ -245,9 +270,10 @@ src/execute/libExecute.a: src/execute/CMakeFiles/Execute.dir/Get.cpp.o
 src/execute/libExecute.a: src/execute/CMakeFiles/Execute.dir/Set.cpp.o
 src/execute/libExecute.a: src/execute/CMakeFiles/Execute.dir/Replace.cpp.o
 src/execute/libExecute.a: src/execute/CMakeFiles/Execute.dir/Stats.cpp.o
+src/execute/libExecute.a: src/execute/CMakeFiles/Execute.dir/Executor.cpp.o
 src/execute/libExecute.a: src/execute/CMakeFiles/Execute.dir/build.make
 src/execute/libExecute.a: src/execute/CMakeFiles/Execute.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX static library libExecute.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/antonloskutov/project_c/afina/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX static library libExecute.a"
 	cd /home/antonloskutov/project_c/afina/src/execute && $(CMAKE_COMMAND) -P CMakeFiles/Execute.dir/cmake_clean_target.cmake
 	cd /home/antonloskutov/project_c/afina/src/execute && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Execute.dir/link.txt --verbose=$(VERBOSE)
 
@@ -263,6 +289,7 @@ src/execute/CMakeFiles/Execute.dir/requires: src/execute/CMakeFiles/Execute.dir/
 src/execute/CMakeFiles/Execute.dir/requires: src/execute/CMakeFiles/Execute.dir/Set.cpp.o.requires
 src/execute/CMakeFiles/Execute.dir/requires: src/execute/CMakeFiles/Execute.dir/Replace.cpp.o.requires
 src/execute/CMakeFiles/Execute.dir/requires: src/execute/CMakeFiles/Execute.dir/Stats.cpp.o.requires
+src/execute/CMakeFiles/Execute.dir/requires: src/execute/CMakeFiles/Execute.dir/Executor.cpp.o.requires
 
 .PHONY : src/execute/CMakeFiles/Execute.dir/requires
 

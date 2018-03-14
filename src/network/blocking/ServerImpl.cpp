@@ -1,5 +1,6 @@
 #include "ServerImpl.h"
 #include "../../protocol/Parser.h"
+#include "../../execute/Executor.cpp"
 
 #include <cassert>
 #include <cstring>
@@ -189,6 +190,7 @@ void ServerImpl::RunAcceptor() {
         throw std::runtime_error("Socket listen() failed");
     }
 
+    Afina::Executor ex("Executor 1", 10, 20, 60, std::chrono::milliseconds(100));
     int client_socket;
     struct sockaddr_in client_addr;
     socklen_t sinSize = sizeof(struct sockaddr_in);
@@ -207,12 +209,17 @@ void ServerImpl::RunAcceptor() {
             if (connections.size() == max_workers) {
                 close(client_socket);
             } else {
-              auto args = new RunConnectionProxyArgs(this, client_socket);
-              pthread_t worker;
-              if (pthread_create(&worker, NULL, ServerImpl::RunConnectionProxy, args) < 0) {
-                close(client_socket);
-                throw std::runtime_error("Could not create server thread");
+              //auto args = new RunConnectionProxyArgs(this, client_socket);
+              if (!ex.Execute(&Afina::Network::Blocking::ServerImpl::RunConnection, this, client_socket))
+              {
+                  close(client_socket);
+                  throw std::runtime_error("Could not create server thread");
               }
+              //pthread_t worker;
+              //if (pthread_create(&worker, NULL, ServerImpl::RunConnectionProxy, args) < 0) {
+                //close(client_socket);
+                //throw std::runtime_error("Could not create server thread");
+              //}
             }
         }
     }
@@ -243,7 +250,7 @@ void ServerImpl::RunConnection(int client_socket) {
 
     if ((!running.load()) || (buf_readed == -1))
     {
-      std::cout << "running stop " << buf_readed << "\n";
+        //auto self_id = std::this_thread::get_id();
       pthread_t self_id = pthread_self();
       close(client_socket);
 
@@ -251,16 +258,18 @@ void ServerImpl::RunConnection(int client_socket) {
       connections.erase(self_id);
       connections_cv.notify_all();
 
+      //std::this_thread::detach();
       pthread_exit(nullptr);
+      //return;
     }
 
     uint32_t body_size = 0;
     size_t parsed = 0;
     if (parser.Parse(str_buf, parsed))
     {
-      auto command = parser.Build(body_size);
-      std::string str_command(str_buf, parsed, body_size);
-      std::string out;
+        auto command = parser.Build(body_size);
+        std::string str_command(str_buf, parsed, body_size);
+        std::string out;
 
       try {
         command->Execute(*pStorage, str_command, out);
@@ -274,6 +283,15 @@ void ServerImpl::RunConnection(int client_socket) {
       }
       parser.Reset();
     }
+
+    //pthread_t self_id = pthread_self();
+    close(client_socket);
+
+    std::lock_guard<std::mutex> lock(connections_mutex);
+    connections.erase(self_id);
+    connections_cv.notify_all();
+
+    pthread_exit(nullptr);
 }
 
 } // namespace Blocking

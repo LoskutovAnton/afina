@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/antonloskutov/project_c/afina/include/afina/Executor.h
+condition_variable
+-
+functional
+-
+memory
+-
+mutex
+-
+queue
+-
+string
+-
+thread
+-
+chrono
+-
+
 /home/antonloskutov/project_c/afina/src/execute/Add.cpp
 afina/Storage.h
 -
@@ -24,6 +42,14 @@ iostream
 
 /home/antonloskutov/project_c/afina/src/execute/Command.cpp
 afina/execute/Command.h
+-
+
+/home/antonloskutov/project_c/afina/src/execute/Executor.cpp
+../../include/afina/Executor.h
+/home/antonloskutov/project_c/afina/include/afina/Executor.h
+iostream
+-
+functional
 -
 
 /home/antonloskutov/project_c/afina/src/execute/Get.cpp

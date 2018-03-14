@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Execute.dir/Set.cpp.o"
   "CMakeFiles/Execute.dir/Replace.cpp.o"
   "CMakeFiles/Execute.dir/Stats.cpp.o"
+  "CMakeFiles/Execute.dir/Executor.cpp.o"
   "libExecute.pdb"
   "libExecute.a"
 )

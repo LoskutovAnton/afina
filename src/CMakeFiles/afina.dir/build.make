@@ -157,6 +157,13 @@ src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
 src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
 src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
 src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
+src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
+src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
+src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
+src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
+src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
+src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
+src/afina: /usr/lib/x86_64-linux-gnu/libdw.so
 src/afina: third-party/libuv-1.11.0/libuv.a
 src/afina: src/protocol/libProtocol.a
 src/afina: src/execute/libExecute.a

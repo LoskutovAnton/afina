@@ -261,6 +261,33 @@ Command.cpp.s:
 	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Command.cpp.s
 .PHONY : Command.cpp.s
 
+Executor.o: Executor.cpp.o
+
+.PHONY : Executor.o
+
+# target to build an object file
+Executor.cpp.o:
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Executor.cpp.o
+.PHONY : Executor.cpp.o
+
+Executor.i: Executor.cpp.i
+
+.PHONY : Executor.i
+
+# target to preprocess a source file
+Executor.cpp.i:
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Executor.cpp.i
+.PHONY : Executor.cpp.i
+
+Executor.s: Executor.cpp.s
+
+.PHONY : Executor.s
+
+# target to generate assembly for a file
+Executor.cpp.s:
+	cd /home/antonloskutov/project_c/afina && $(MAKE) -f src/execute/CMakeFiles/Execute.dir/build.make src/execute/CMakeFiles/Execute.dir/Executor.cpp.s
+.PHONY : Executor.cpp.s
+
 Get.o: Get.cpp.o
 
 .PHONY : Get.o
@@ -392,6 +419,9 @@ help:
 	@echo "... Command.o"
 	@echo "... Command.i"
 	@echo "... Command.s"
+	@echo "... Executor.o"
+	@echo "... Executor.i"
+	@echo "... Executor.s"
 	@echo "... Get.o"
 	@echo "... Get.i"
 	@echo "... Get.s"
