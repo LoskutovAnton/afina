@@ -1,6 +1,6 @@
 #include "ServerImpl.h"
 #include "../../protocol/Parser.h"
-#include "../../execute/Executor.cpp"
+#include <execute/Executor.cpp>
 
 #include <cassert>
 #include <cstring>
@@ -250,7 +250,6 @@ void ServerImpl::RunConnection(int client_socket) {
 
     if ((!running.load()) || (buf_readed == -1))
     {
-        //auto self_id = std::this_thread::get_id();
       pthread_t self_id = pthread_self();
       close(client_socket);
 
@@ -258,9 +257,7 @@ void ServerImpl::RunConnection(int client_socket) {
       connections.erase(self_id);
       connections_cv.notify_all();
 
-      //std::this_thread::detach();
       pthread_exit(nullptr);
-      //return;
     }
 
     uint32_t body_size = 0;
@@ -284,7 +281,6 @@ void ServerImpl::RunConnection(int client_socket) {
       parser.Reset();
     }
 
-    //pthread_t self_id = pthread_self();
     close(client_socket);
 
     std::lock_guard<std::mutex> lock(connections_mutex);
