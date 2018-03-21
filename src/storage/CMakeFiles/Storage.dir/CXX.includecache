@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.cpp
+MapBasedGlobalLockImpl.h
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.h
+
+/home/antonloskutov/project_c/afina/src/storage/MapBasedGlobalLockImpl.h
+unordered_map
+-
+mutex
+-
+string
+-
+list
+-
+afina/Storage.h
+-
+
+include/afina/Storage.h
+string
+-
+

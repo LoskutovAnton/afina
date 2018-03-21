@@ -2,7 +2,9 @@
 #define AFINA_NETWORK_NONBLOCKING_WORKER_H
 
 #include <memory>
+#include <atomic>
 #include <pthread.h>
+#include <vector>
 
 namespace Afina {
 
@@ -11,6 +13,12 @@ class Storage;
 
 namespace Network {
 namespace NonBlocking {
+
+struct Connection {
+    Connection(int _fd) : fd(_fd) {}
+    ~Connection(void) {}
+    int fd;
+};
 
 /**
  * # Thread running epoll
@@ -21,6 +29,7 @@ class Worker {
 public:
     Worker(std::shared_ptr<Afina::Storage> ps);
     ~Worker();
+    Worker(const Worker& w) : pStorage(w.pStorage) {};
 
     /**
      * Spaws new background thread that is doing epoll on the given server
@@ -47,10 +56,25 @@ protected:
     /**
      * Method executing by background thread
      */
-    void OnRun(void *args);
+    void OnRun(int server_socket);
 
 private:
+    using OnRunProxyArgs = std::pair<Worker*, int>;
+    using Connection = struct Connection;
+
+    bool read(int client_socket);
+    static void* OnRunProxy(void* args);
+    void EraseConnection(int client_socket);
+
     pthread_t thread;
+    std::vector<std::unique_ptr<Connection>> connections;
+    std::shared_ptr<Afina::Storage> pStorage;
+    int epfd;
+    std::atomic<bool> running;
+    int server_socket;
+
+    const size_t BUF_SIZE = 1024;
+    const size_t EPOLL_MAX_EVENTS = 10;
 };
 
 } // namespace NonBlocking
