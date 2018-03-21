@@ -5,6 +5,7 @@
 #include <atomic>
 #include <pthread.h>
 #include <vector>
+#include <string>
 
 namespace Afina {
 
@@ -15,9 +16,10 @@ namespace Network {
 namespace NonBlocking {
 
 struct Connection {
-    Connection(int _fd) : fd(_fd) {}
+    Connection(int _fd) : fd(_fd) {str_buf.clear();}
     ~Connection(void) {}
     int fd;
+    std::string str_buf;
 };
 
 /**
@@ -62,7 +64,7 @@ private:
     using OnRunProxyArgs = std::pair<Worker*, int>;
     using Connection = struct Connection;
 
-    bool read(int client_socket);
+    bool read(Connection* conn);
     static void* OnRunProxy(void* args);
     void EraseConnection(int client_socket);
 

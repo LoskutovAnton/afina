@@ -34,6 +34,7 @@ ServerImpl::~ServerImpl() {}
 void ServerImpl::Start(uint32_t port, uint16_t n_workers) {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
 
+
     // If a client closes a connection, this will generally produce a SIGPIPE
     // signal that will kill the process. We want to ignore this signal, so send()
     // just returns -1 when this happens.

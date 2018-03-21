@@ -195,6 +195,7 @@ afina_test(
 	1
 );
 
+
 afina_test(
 	sub {
 		my $socket = shift;
