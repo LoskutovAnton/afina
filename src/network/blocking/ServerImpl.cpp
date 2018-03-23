@@ -128,7 +128,7 @@ void ServerImpl::Join() {
 
     std::unique_lock<std::mutex> lock(connections_mutex);
     while(!connections.empty()){
-      connections_cv.wait(lock);
+        connections_cv.wait(lock);
     }
 }
 
@@ -209,23 +209,43 @@ void ServerImpl::RunAcceptor() {
             if (connections.size() == max_workers) {
                 close(client_socket);
             } else {
-              //auto args = new RunConnectionProxyArgs(this, client_socket);
-              if (!ex.Execute(&Afina::Network::Blocking::ServerImpl::RunConnection, this, client_socket))
-              {
-                  close(client_socket);
-                  throw std::runtime_error("Could not create server thread");
-              }
-              //pthread_t worker;
-              //if (pthread_create(&worker, NULL, ServerImpl::RunConnectionProxy, args) < 0) {
-                //close(client_socket);
-                //throw std::runtime_error("Could not create server thread");
-              //}
+                if (!ex.Execute(&Afina::Network::Blocking::ServerImpl::RunConnection, this, client_socket))
+                {
+                    close(client_socket);
+                    throw std::runtime_error("Could not create server thread");
+                }
             }
         }
     }
-    std::cout << "ended run acceptor\n";
     // Cleanup on exit...
     close(server_socket);
+}
+
+bool ServerImpl::Parse(std::string str_buf, int client_socket)
+{
+    Protocol::Parser parser;
+    size_t parsed = 0;
+    if (parser.Parse(str_buf, parsed))
+    {
+        uint32_t body_size = 0;
+        auto command = parser.Build(body_size);
+        std::string str_command(str_buf, parsed, body_size);
+        std::string out;
+
+        try {
+            command->Execute(*pStorage, str_command, out);
+            out += "\r\n";
+        } catch (std::runtime_error &ex) {
+            out = std::string("SERVER_ERROR ") + ex.what() + "\r\n";
+        }
+
+        if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
+            throw std::runtime_error("Socket send() failed");
+        }
+        parser.Reset();
+        return true;
+    }
+    return false;
 }
 
 // See Server.h
@@ -234,51 +254,34 @@ void ServerImpl::RunConnection(int client_socket) {
 
     pthread_t self_id = pthread_self();
     {
-      std::lock_guard<std::mutex> lock(connections_mutex);
-      connections.insert(self_id);
+        std::lock_guard<std::mutex> lock(connections_mutex);
+        connections.insert(self_id);
     }
 
     char buf[BUF_SIZE];
-    Protocol::Parser parser;
     std::string str_buf;
     uint32_t buf_readed;
 
     do {
-      buf_readed = recv(client_socket, buf, BUF_SIZE, 0);
-      str_buf.append(buf, buf_readed);
+        buf_readed = recv(client_socket, buf, BUF_SIZE, 0);
+        str_buf.append(buf, buf_readed);
+
+        if ((buf_readed >= 0) && (Parse(str_buf, client_socket)))
+        {
+            break;
+        }
     } while(buf_readed > 0);
 
     if ((!running.load()) || (buf_readed == -1))
     {
-      pthread_t self_id = pthread_self();
-      close(client_socket);
+        pthread_t self_id = pthread_self();
+        close(client_socket);
 
-      std::lock_guard<std::mutex> lock(connections_mutex);
-      connections.erase(self_id);
-      connections_cv.notify_all();
+        std::lock_guard<std::mutex> lock(connections_mutex);
+        connections.erase(self_id);
+        connections_cv.notify_all();
 
-      pthread_exit(nullptr);
-    }
-
-    uint32_t body_size = 0;
-    size_t parsed = 0;
-    if (parser.Parse(str_buf, parsed))
-    {
-        auto command = parser.Build(body_size);
-        std::string str_command(str_buf, parsed, body_size);
-        std::string out;
-
-      try {
-        command->Execute(*pStorage, str_command, out);
-        out += "\r\n";
-      } catch (std::runtime_error &ex) {
-        out = std::string("SERVER_ERROR ") + ex.what() + "\r\n";
-      }
-
-      if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
-        throw std::runtime_error("Socket send() failed");
-      }
-      parser.Reset();
+        pthread_exit(nullptr);
     }
 
     close(client_socket);

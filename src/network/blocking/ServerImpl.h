@@ -43,12 +43,14 @@ protected:
     void RunConnection(int);
 
 private:
-    static const ssize_t BUF_SIZE = 10;
+    static const ssize_t BUF_SIZE = 1024;
 
     static void *RunAcceptorProxy(void *p);
 
     using RunConnectionProxyArgs = std::pair<ServerImpl *, int>;
     static void *RunConnectionProxy(void *p);
+
+    bool Parse(std::string str_buf, int client_socket);
 
     // Atomic flag to notify threads when it is time to stop. Note that
     // flag must be atomic in order to safely publisj changes cross thread

@@ -7,7 +7,7 @@ namespace Afina {
 Executor::Executor(std::string name, size_t _low_watermark, size_t _high_watermark, size_t _max_queue_size, std::chrono::milliseconds _idle_time)
 :low_watermark(_low_watermark),  high_watermark(_high_watermark), max_queue_size(_max_queue_size), idle_time(_idle_time), state(State::kRun)
 {
-    std::cout << "pool: " << name << " " << __PRETTY_FUNCTION__ << std::endl;
+    std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     std::lock_guard<std::mutex> lock(mutex);
     for (int i = 0; i < low_watermark; i++)
     {
@@ -16,7 +16,7 @@ Executor::Executor(std::string name, size_t _low_watermark, size_t _high_waterma
 }
 
 void Executor::Stop(bool await) {
-    std::cout << "pool: " << __PRETTY_FUNCTION__ << std::endl;
+    std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     {
         std::lock_guard<std::mutex> lock(mutex);
         if (state == State::kRun)
@@ -26,7 +26,6 @@ void Executor::Stop(bool await) {
     }
 
     empty_condition.notify_all();
-    std::cout << "size: " << threads.size() << '\n';
     if (await) {
         for (size_t i = 0; i < threads.size(); i++) {
             if (threads[i].joinable())
@@ -39,12 +38,12 @@ void Executor::Stop(bool await) {
 }
 
 Executor::~Executor() {
-    std::cout << "pool: " << __PRETTY_FUNCTION__ << std::endl;
+    std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     Stop(true);
 }
 
 void perform(Executor *executor) {
-    std::cout << "pool: " << __PRETTY_FUNCTION__ << std::endl;
+    std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     std::function<void()> task;
 
     while (true)
