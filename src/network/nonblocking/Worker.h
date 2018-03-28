@@ -16,7 +16,14 @@ namespace Network {
 namespace NonBlocking {
 
 struct Connection {
-    Connection(int _fd) : fd(_fd) {str_buf.clear();}
+    Connection(int _fd) : fd(_fd) {
+        str_buf.clear();
+        //rfifo_name.clear();
+    }
+    //Connection(int _rfifo_fd, std::string _name) : rfifo_fd(_rfifo_fd), rfifo_name(_name)
+    //{
+    //    str_buf.clear();
+    //}
     ~Connection(void) {}
     int fd;
     std::string str_buf;
@@ -54,6 +61,10 @@ public:
      */
     void Join();
 
+    void enableFIFO(const std::string& rfifo, const std::string& wfifo);
+
+    pthread_t thread;
+
 protected:
     /**
      * Method executing by background thread
@@ -64,16 +75,20 @@ private:
     using OnRunProxyArgs = std::pair<Worker*, int>;
     using Connection = struct Connection;
 
-    bool read(Connection* conn);
+    bool Read(Connection* conn, bool fifo);
     static void* OnRunProxy(void* args);
     void EraseConnection(int client_socket);
 
-    pthread_t thread;
     std::vector<std::unique_ptr<Connection>> connections;
     std::shared_ptr<Afina::Storage> pStorage;
     int epfd;
     std::atomic<bool> running;
     int server_socket;
+
+    std::string rfifo_name;
+    std::string wfifo_name;
+    int rfifo_fd;
+    int wfifo_fd;
 
     const size_t BUF_SIZE = 1024;
     const size_t EPOLL_MAX_EVENTS = 10;

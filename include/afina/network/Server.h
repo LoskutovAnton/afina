@@ -40,6 +40,8 @@ public:
      */
     virtual void Join() = 0;
 
+    virtual void addFIFO(const std::string& rfifo, const std::string& wfifo) {};
+
 protected:
     /**
      * Instance of backing storeage on which current server should execute

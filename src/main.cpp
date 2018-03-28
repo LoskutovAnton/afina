@@ -34,6 +34,11 @@ void timer_handler(uv_timer_t *handle) {
 }
 
 int main(int argc, char **argv) {
+    bool rfifo_mode = false;
+    bool wfifo_mode = false;
+    std::string rfifo = "";
+    std::string wfifo = "";
+
     // Build version
     // TODO: move into Version.h as a function
     std::stringstream app_string;
@@ -49,6 +54,8 @@ int main(int argc, char **argv) {
         // and simplify validation below
         options.add_options()("s,storage", "Type of storage service to use", cxxopts::value<std::string>());
         options.add_options()("n,network", "Type of network service to use", cxxopts::value<std::string>());
+        options.add_options()("r,readfifo", "Readfifo mode", cxxopts::value<std::string>());
+        options.add_options()("w,writefifo", "Writefifo mode", cxxopts::value<std::string>());
         options.add_options()("h,help", "Print usage info");
         options.parse(argc, argv);
 
@@ -81,6 +88,18 @@ int main(int argc, char **argv) {
     std::string network_type = "uv";
     if (options.count("network") > 0) {
         network_type = options["network"].as<std::string>();
+    }
+
+    if (options.count("readfifo") > 0) {
+        rfifo_mode = true;
+        rfifo = options["readfifo"].as<std::string>();
+        std::cout << "rfifo: " << rfifo << std::endl;
+    }
+
+    if (options.count("writefifo") > 0) {
+        wfifo_mode = true;
+        wfifo = options["writefifo"].as<std::string>();
+        std::cout << "wfifo: " << wfifo << std::endl;
     }
 
     if (network_type == "uv") {
@@ -121,7 +140,8 @@ int main(int argc, char **argv) {
     // Start services
     try {
         app.storage->Start();
-        app.server->Start(8080);
+        app.server->Start(8080, 10);
+        app.server->addFIFO(rfifo, wfifo);
 
         // Freeze current thread and process events
         std::cout << "Application started" << std::endl;

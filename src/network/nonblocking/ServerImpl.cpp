@@ -34,7 +34,6 @@ ServerImpl::~ServerImpl() {}
 void ServerImpl::Start(uint32_t port, uint16_t n_workers) {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
 
-
     // If a client closes a connection, this will generally produce a SIGPIPE
     // signal that will kill the process. We want to ignore this signal, so send()
     // just returns -1 when this happens.
@@ -74,7 +73,11 @@ void ServerImpl::Start(uint32_t port, uint16_t n_workers) {
         throw std::runtime_error("Socket listen() failed");
     }
 
-    for (int i = 0; i < n_workers; i++) {
+    workers.emplace_back(pStorage);
+    workers.front().enableFIFO(rfifo, wfifo);
+    workers.front().Start(server_socket);
+
+    for (int i = 1; i < n_workers; i++) {
         workers.emplace_back(pStorage);
         workers.back().Start(server_socket);
     }
@@ -85,15 +88,23 @@ void ServerImpl::Stop() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     for (auto &worker : workers) {
         worker.Stop();
+        pthread_detach(worker.thread);
     }
+    //std::atomic_thread_fence(std::memory_order_release);
 }
 
 // See Server.h
 void ServerImpl::Join() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
-    for (auto &worker : workers) {
-        worker.Join();
+    for (int i = 0; i < workers.size(); i++)
+    {
+        workers[i].Join();
     }
+}
+
+void ServerImpl::addFIFO(std::string _rfifo = "", std::string _wfifo = "") {
+    rfifo = _rfifo;
+    wfifo = _wfifo;
 }
 
 } // namespace NonBlocking
