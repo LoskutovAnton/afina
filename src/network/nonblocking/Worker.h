@@ -15,9 +15,16 @@ class Storage;
 namespace Network {
 namespace NonBlocking {
 
+enum class State {
+    kReading,
+    kBuilding,
+    kWriting
+};
+
 struct Connection {
-    Connection(int _fd) : fd(_fd) {
-        str_buf.clear();
+    Connection(int _fd) : fd(_fd), state(State::kReading) {
+        read_str.clear();
+        write_str.clear();
         //rfifo_name.clear();
     }
     //Connection(int _rfifo_fd, std::string _name) : rfifo_fd(_rfifo_fd), rfifo_name(_name)
@@ -26,7 +33,9 @@ struct Connection {
     //}
     ~Connection(void) {}
     int fd;
-    std::string str_buf;
+    std::string read_str;
+    std::string write_str;
+    State state;
 };
 
 /**
@@ -92,6 +101,7 @@ private:
 
     const size_t BUF_SIZE = 1024;
     const size_t EPOLL_MAX_EVENTS = 10;
+    const size_t CHUNK_SIZE = 128;
 };
 
 } // namespace NonBlocking

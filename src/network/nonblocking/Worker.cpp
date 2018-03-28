@@ -75,85 +75,105 @@ void Worker::Join() {
 bool Worker::Read(Connection* conn, bool fifo)
 {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
+    switch (conn->state) {
+        case State::kReading : std::cout << "state: kReading\n"; break;
+        case State::kBuilding : std::cout << "state: kBuilding\n"; break;
+        default: std::cout << "state: kWriting\n"; break;
+    }
     char buf[BUF_SIZE];
     Protocol::Parser parser;
     int client_socket = conn->fd;
-    int buf_readed;
+    size_t new_chunk_size = 0;
 
-    while(true) {
-        if (fifo)
-        {
-            buf_readed = read(rfifo_fd, buf, BUF_SIZE);
-        } else {
-            buf_readed = read(client_socket, buf, BUF_SIZE);
-        }
-        if (buf_readed > 0)
-        {
-            conn->str_buf.append(buf, buf_readed);
-        } else {
-            break;
-        }
-    }
-
-    if (buf_readed < 0)
+    if (conn->state == State::kReading)
     {
-        if (!((errno == EWOULDBLOCK || errno == EAGAIN) && running.load())) {
-            return true;
+        int buf_readed = 0;
+        size_t parsed = 0;
+        try
+        {
+            while ((new_chunk_size < CHUNK_SIZE) && (!parser.Parse(conn->read_str, parsed))) {
+                if (fifo)
+                {
+                    buf_readed = read(rfifo_fd, buf, BUF_SIZE);
+                } else {
+                    buf_readed = read(client_socket, buf, BUF_SIZE);
+                }
+                if (buf_readed > 0)
+                {
+                    new_chunk_size += buf_readed;
+                    conn->read_str.append(buf, buf_readed);
+                } else {
+                    break;
+                }
+            }
+
+            if (buf_readed < 0)
+            {
+                if (!((errno == EWOULDBLOCK || errno == EAGAIN) && running.load())) {
+                    return true;
+                }
+            }
+
+            if (parsed != 0)
+            {
+                conn->read_str.erase(0, parsed);
+                if (conn->read_str[0] == '\r')
+                {
+                    conn->read_str.erase(0, 2);
+                }
+                conn->state = State::kBuilding;
+            }
+        } catch (std::runtime_error &ex) {
+            conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
+            conn->read_str.clear();
+            conn->state = State::kWriting;
+            //if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
+            //    throw std::runtime_error("Socket send() failed");
+            //}
         }
     }
 
-    bool isParsed = false;
-    size_t parsed = 0;
-    uint32_t body_size = 0;
-    try {
-        while (parser.Parse(conn->str_buf, parsed))
+    if (conn->state == State::kBuilding)
+    {
+        uint32_t body_size = 0;
+        auto command = parser.Build(body_size);
+        if (conn->read_str.size() >= body_size)
         {
-            isParsed = true;
-            auto command = parser.Build(body_size);
-            std::string str_command(conn->str_buf, parsed, body_size);
-            conn->str_buf.erase(0, parsed+body_size);
-            if (conn->str_buf[0] == '\r')
-            {
-                conn->str_buf.erase(0, 2);
-            }
-            std::string out;
-
+            std::string str_command(conn->read_str, 0, body_size);
             try {
-                command->Execute(*pStorage, str_command, out);
-                out += "\r\n";
+                command->Execute(*pStorage, str_command, conn->write_str);
+                conn->read_str.erase(0, body_size);
+                conn->write_str += "\r\n";
             } catch (std::runtime_error &ex) {
-                out = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
-            }
-            size_t writed = 0;
-            if (fifo)
-            {
-                //while (writed = write(wfifo_fd, out.c_str(), out.size()) > 0)
-                writed = write(wfifo_fd, out.c_str(), out.size());
-            } else {
-                writed = write(client_socket, out.c_str(), out.size());
-                //{
-                //    out.erase(0, writed);
-                //}
-                ///if (write(client_socket, out.c_str(), out.size()) <= 0) {
-                ///    throw std::runtime_error("Socket send() failed");
-                ///}
-            }
-            if (writed <= 0)
-            {
-                throw std::runtime_error("Socket send() failed");
+                conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
             }
             parser.Reset();
-        }
-    } catch (std::runtime_error &ex) {
-        std::string out = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
-        conn->str_buf.clear();
-        isParsed = true;
-        if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
-            throw std::runtime_error("Socket send() failed");
+            conn->state = State::kWriting;
         }
     }
 
-    return isParsed;
+    if (conn->state == State::kWriting)
+    {
+        size_t writed = 0;
+        if (fifo)
+        {
+            writed = write(wfifo_fd, conn->write_str.c_str(), conn->write_str.size());
+        } else {
+            writed = write(client_socket, conn->write_str.c_str(), conn->write_str.size());
+        }
+        if (writed <= 0)
+        {
+            throw std::runtime_error("Socket send() failed");
+        } else {
+            conn->write_str.erase(0, writed);
+        }
+        if (conn->write_str.size() == 0)
+        {
+            conn->state = State::kReading;
+        }
+    }
+
+    return conn->state == State::kWriting;
 }
 
 void Worker::EraseConnection(int client_socket)
@@ -203,7 +223,7 @@ void Worker::OnRun(int _server_socket)
         throw std::runtime_error("Server epoll_ctl() failed");
     }
 
-    if (rfifo_name.size() != 0)
+    /*if (rfifo_name.size() != 0)
     {
         if (mkfifo(rfifo_name.c_str(), 0765) == -1) {
             throw std::runtime_error("mkfifo wfifo");
@@ -244,7 +264,7 @@ void Worker::OnRun(int _server_socket)
         if (epoll_ctl(epfd, EPOLL_CTL_ADD, wfifo_fd, &event) == -1) {
             throw std::runtime_error("Worker failed to assign fifo_read to epoll");
         }
-  }
+  }*/
 
     while (running.load())
     {
@@ -330,89 +350,6 @@ void Worker::enableFIFO(const std::string& rfifo, const std::string& wfifo) {
   rfifo_name = rfifo;
   wfifo_name = wfifo;
 }
-/*
-void Worker::readFIFO(Connection& con) {
-    char buf[SENDBUFLEN];
-    int len;
-    while((len = read(this->rfifo_fd, buf, SENDBUFLEN)) > 0) {
-        processConnection(con, buf, len, &Worker::writeFIFO);
-    }
-    if (len < 0) {
-        con.parser.Reset();
-        con.body_size = 0;
-        con.offset = 0;
-    }
-}
-
-void Worker::writeFIFO(Connection& con) {
-  if (this->wfifo_fd == -1) {
-    con.out.clear();
-    return;
-  }
-  int c = 1;
-  while (c > 0) {
-    if (con.out.size() == 0) {
-      break;
-    }
-    if (con.out[0].length() == 0) {
-      break;
-    }
-    c = write(this->wfifo_fd, con.out[0].data(), con.out[0].length());
-    if (c < 0) {
-      con.out.clear();
-      break;
-    }
-    con.out[0].erase(0, c);
-    if (con.out[0].length() == 0) {
-      con.out.erase(con.out.begin());
-    }
-  }
-}
-
-void Worker::freeFIFO(Connection& con) {
-  char buf[SENDBUFLEN];
-  int len;
-  while((len = read(this->rfifo_fd, buf, SENDBUFLEN)) > 0) {}
-}
-
-void Worker::enableFIFO(const std::string& rfifo, const std::string& wfifo) {
-  this->rfifo_name = rfifo;
-  this->wfifo_name = wfifo;
-  if (rfifo != "") {
-    if (mkfifo(rfifo.c_str(), 0666) == -1) {
-      throw std::runtime_error("mkfifo rfifo");
-    }
-    this->rfifo_fd = open(rfifo.c_str(), O_RDONLY | O_NONBLOCK);
-    if (this->rfifo_fd == -1) {
-      throw std::runtime_error("open rfifo");
-    }
-    this->addConnection(this->rfifo_fd, true, true);
-  }
-  std::cout << "here2" << std::endl;
-  if (wfifo != "") {
-    if (mkfifo(wfifo.c_str(), 0666) == -1) {
-      throw std::runtime_error("mkfifo wfifo");
-    }
-    this->wfifo_fd = open(wfifo.c_str(), O_RDWR | O_NONBLOCK);
-    if (this->wfifo_fd == -1) {
-      throw std::runtime_error("open wfifo");
-    }
-
-    this->addConnection(this->wfifo_fd, false, true);
-  }
-
-}
-
-void Worker::disableFIFO(void) {
-  if (rfifo_name != "") {
-    close(this->rfifo_fd);
-    unlink(this->rfifo_name.c_str());
-  }
-  if (wfifo_name != "") {
-    close(this->wfifo_fd);
-    unlink(this->rfifo_name.c_str());
-  }
-}*/
 
 } // namespace NonBlocking
 } // namespace Network
