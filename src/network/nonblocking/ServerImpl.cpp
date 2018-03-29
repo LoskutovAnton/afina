@@ -74,7 +74,7 @@ void ServerImpl::Start(uint32_t port, uint16_t n_workers) {
     }
 
     workers.emplace_back(pStorage);
-    workers.front().enableFIFO(rfifo, wfifo);
+    workers.front().enableFIFO(rfifo);
     workers.front().Start(server_socket);
 
     for (int i = 1; i < n_workers; i++) {
@@ -90,7 +90,6 @@ void ServerImpl::Stop() {
         worker.Stop();
         pthread_detach(worker.thread);
     }
-    //std::atomic_thread_fence(std::memory_order_release);
 }
 
 // See Server.h
@@ -102,9 +101,9 @@ void ServerImpl::Join() {
     }
 }
 
-void ServerImpl::addFIFO(std::string _rfifo = "", std::string _wfifo = "") {
+void ServerImpl::addFIFO(const std::string _rfifo = "") {
+    std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     rfifo = _rfifo;
-    wfifo = _wfifo;
 }
 
 } // namespace NonBlocking

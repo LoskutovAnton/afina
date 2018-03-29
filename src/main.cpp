@@ -55,7 +55,7 @@ int main(int argc, char **argv) {
         options.add_options()("s,storage", "Type of storage service to use", cxxopts::value<std::string>());
         options.add_options()("n,network", "Type of network service to use", cxxopts::value<std::string>());
         options.add_options()("r,readfifo", "Readfifo mode", cxxopts::value<std::string>());
-        options.add_options()("w,writefifo", "Writefifo mode", cxxopts::value<std::string>());
+        //options.add_options()("w,writefifo", "Writefifo mode", cxxopts::value<std::string>());
         options.add_options()("h,help", "Print usage info");
         options.parse(argc, argv);
 
@@ -96,11 +96,11 @@ int main(int argc, char **argv) {
         std::cout << "rfifo: " << rfifo << std::endl;
     }
 
-    if (options.count("writefifo") > 0) {
-        wfifo_mode = true;
-        wfifo = options["writefifo"].as<std::string>();
-        std::cout << "wfifo: " << wfifo << std::endl;
-    }
+    //if (options.count("writefifo") > 0) {
+    //    wfifo_mode = true;
+    //    wfifo = "/dev/null";//options["writefifo"].as<std::string>();
+    //    std::cout << "wfifo: " << wfifo << std::endl;
+    //}
 
     if (network_type == "uv") {
         app.server = std::make_shared<Afina::Network::UV::ServerImpl>(app.storage);
@@ -108,6 +108,10 @@ int main(int argc, char **argv) {
         app.server = std::make_shared<Afina::Network::Blocking::ServerImpl>(app.storage);
     } else if (network_type == "nonblocking") {
         app.server = std::make_shared<Afina::Network::NonBlocking::ServerImpl>(app.storage);
+        if (rfifo_mode)
+        {
+            app.server->addFIFO(rfifo);
+        }
     } else {
         throw std::runtime_error("Unknown network type");
     }
@@ -141,7 +145,6 @@ int main(int argc, char **argv) {
     try {
         app.storage->Start();
         app.server->Start(8080, 10);
-        app.server->addFIFO(rfifo, wfifo);
 
         // Freeze current thread and process events
         std::cout << "Application started" << std::endl;

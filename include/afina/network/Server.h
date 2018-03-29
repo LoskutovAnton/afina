@@ -40,7 +40,7 @@ public:
      */
     virtual void Join() = 0;
 
-    virtual void addFIFO(const std::string& rfifo, const std::string& wfifo) {};
+    virtual void addFIFO(const std::string rfifo) {};
 
 protected:
     /**

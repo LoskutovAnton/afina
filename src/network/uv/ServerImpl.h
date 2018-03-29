@@ -36,6 +36,8 @@ protected:
      * List of all workers created for this instance of server
      */
     std::vector<Worker *> workers;
+
+    std::string rfifo;
 };
 
 } // namespace UV

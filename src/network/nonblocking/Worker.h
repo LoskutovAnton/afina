@@ -70,7 +70,7 @@ public:
      */
     void Join();
 
-    void enableFIFO(const std::string& rfifo, const std::string& wfifo);
+    void enableFIFO(const std::string& rfifo);
 
     pthread_t thread;
 
@@ -95,9 +95,7 @@ private:
     int server_socket;
 
     std::string rfifo_name;
-    std::string wfifo_name;
     int rfifo_fd;
-    int wfifo_fd;
 
     const size_t BUF_SIZE = 1024;
     const size_t EPOLL_MAX_EVENTS = 10;

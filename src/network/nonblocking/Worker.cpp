@@ -32,11 +32,6 @@ Worker::~Worker() {
         close(rfifo_fd);
         unlink(rfifo_name.c_str());
     }
-
-    if (wfifo_name.size() != 0) {
-        close(wfifo_fd);
-        unlink(wfifo_name.c_str());
-    }
 }
 
 void* Worker::OnRunProxy(void* _args) {
@@ -75,36 +70,42 @@ void Worker::Join() {
 bool Worker::Read(Connection* conn, bool fifo)
 {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
-    switch (conn->state) {
-        case State::kReading : std::cout << "state: kReading\n"; break;
-        case State::kBuilding : std::cout << "state: kBuilding\n"; break;
-        default: std::cout << "state: kWriting\n"; break;
-    }
     char buf[BUF_SIZE];
     Protocol::Parser parser;
-    int client_socket = conn->fd;
-    size_t new_chunk_size = 0;
-
-    if (conn->state == State::kReading)
+    int write_socket, read_socket;
+    if (!fifo) {
+        read_socket = conn->fd;
+        write_socket = conn->fd;
+    } else {
+        read_socket = rfifo_fd;
+    }
+    while (running.load())
     {
-        int buf_readed = 0;
         size_t parsed = 0;
-        try
+        if (conn->state == State::kReading)
         {
-            while ((new_chunk_size < CHUNK_SIZE) && (!parser.Parse(conn->read_str, parsed))) {
-                if (fifo)
+            int buf_readed = 0;
+            bool isParsed = true;
+            try
+            {
+                while (!parser.Parse(conn->read_str, parsed))
                 {
-                    buf_readed = read(rfifo_fd, buf, BUF_SIZE);
-                } else {
-                    buf_readed = read(client_socket, buf, BUF_SIZE);
+                    buf_readed = read(read_socket, buf, BUF_SIZE);
+                    isParsed = false;
+                    if (buf_readed > 0)
+                    {
+                        conn->read_str.append(buf, buf_readed);
+                        isParsed = true;
+                        parser.Reset();
+                    } else {
+                        break;
+                    }
                 }
-                if (buf_readed > 0)
-                {
-                    new_chunk_size += buf_readed;
-                    conn->read_str.append(buf, buf_readed);
-                } else {
-                    break;
-                }
+            } catch (std::runtime_error &ex) {
+                conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
+                conn->read_str.clear();
+                conn->state = State::kWriting;
+                continue;
             }
 
             if (buf_readed < 0)
@@ -114,66 +115,80 @@ bool Worker::Read(Connection* conn, bool fifo)
                 }
             }
 
-            if (parsed != 0)
+            if (isParsed)
             {
                 conn->read_str.erase(0, parsed);
+                conn->state = State::kBuilding;
+            } else {
+                parser.Reset();
+            }
+        }
+
+        if (conn->state == State::kBuilding)
+        {
+            uint32_t body_size = 0;
+            auto command = parser.Build(body_size);
+            if (conn->read_str.size() >= body_size)
+            {
+                std::string str_command(conn->read_str, 0, body_size);
+                conn->read_str.erase(0, body_size);
                 if (conn->read_str[0] == '\r')
                 {
                     conn->read_str.erase(0, 2);
                 }
-                conn->state = State::kBuilding;
+                try {
+                    command->Execute(*pStorage, str_command, conn->write_str);
+                    conn->write_str += "\r\n";
+                } catch (std::runtime_error &ex) {
+                    conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
+                    conn->read_str.clear();
+                }
+                parser.Reset();
+                conn->state = State::kWriting;
+            } else {
+                conn->state = State::kReading;
             }
-        } catch (std::runtime_error &ex) {
-            conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
-            conn->read_str.clear();
-            conn->state = State::kWriting;
-            //if (send(client_socket, out.c_str(), out.size(), 0) <= 0) {
-            //    throw std::runtime_error("Socket send() failed");
-            //}
         }
-    }
 
-    if (conn->state == State::kBuilding)
-    {
-        uint32_t body_size = 0;
-        auto command = parser.Build(body_size);
-        if (conn->read_str.size() >= body_size)
+        if (conn->state == State::kWriting)
         {
-            std::string str_command(conn->read_str, 0, body_size);
-            try {
-                command->Execute(*pStorage, str_command, conn->write_str);
-                conn->read_str.erase(0, body_size);
-                conn->write_str += "\r\n";
-            } catch (std::runtime_error &ex) {
-                conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
+            size_t new_chunk_size = 0;
+            int writed = 1;
+            while (new_chunk_size < CHUNK_SIZE)
+            {
+                if (!fifo) {
+                    writed = write(write_socket, conn->write_str.c_str(), conn->write_str.size());
+                } else {
+                    writed = 0;
+                    conn->write_str.clear();
+                }
+                if (writed > 0) {
+                    new_chunk_size += writed;
+                    conn->write_str.erase(0, writed);
+                } else {
+                    break;
+                }
             }
-            parser.Reset();
-            conn->state = State::kWriting;
+
+            if (writed < 0)
+            {
+                if (!((errno == EWOULDBLOCK || errno == EAGAIN) && running.load())) {
+                    return true;
+                }
+            }
+
+            if (conn->write_str.size() == 0)
+            {
+                conn->state = State::kReading;
+                if (conn->read_str.size() == 0)
+                {
+                    return true;
+                }
+            }
         }
     }
 
-    if (conn->state == State::kWriting)
-    {
-        size_t writed = 0;
-        if (fifo)
-        {
-            writed = write(wfifo_fd, conn->write_str.c_str(), conn->write_str.size());
-        } else {
-            writed = write(client_socket, conn->write_str.c_str(), conn->write_str.size());
-        }
-        if (writed <= 0)
-        {
-            throw std::runtime_error("Socket send() failed");
-        } else {
-            conn->write_str.erase(0, writed);
-        }
-        if (conn->write_str.size() == 0)
-        {
-            conn->state = State::kReading;
-        }
-    }
-
-    return conn->state == State::kWriting;
+    return true;
 }
 
 void Worker::EraseConnection(int client_socket)
@@ -214,7 +229,6 @@ void Worker::OnRun(int _server_socket)
     epoll_event event, events_buffer[EPOLL_MAX_EVENTS];
 
     Connection* server_con = new Connection(server_socket);
-
     event.events = EPOLLEXCLUSIVE | EPOLLIN | EPOLLHUP | EPOLLERR;
     event.data.ptr = server_con;
 
@@ -223,12 +237,12 @@ void Worker::OnRun(int _server_socket)
         throw std::runtime_error("Server epoll_ctl() failed");
     }
 
-    /*if (rfifo_name.size() != 0)
+    if (rfifo_name.size() != 0)
     {
         if (mkfifo(rfifo_name.c_str(), 0765) == -1) {
             throw std::runtime_error("mkfifo wfifo");
         }
-        rfifo_fd = open(rfifo_name.c_str(), O_RDWR | O_NONBLOCK);
+        rfifo_fd = open(rfifo_name.c_str(), O_RDONLY | O_NONBLOCK);
         if (rfifo_fd == -1) {
             throw std::runtime_error("open wfifo");
         }
@@ -236,35 +250,10 @@ void Worker::OnRun(int _server_socket)
         Connection* connection = new Connection(rfifo_fd);
         connections.emplace_back(std::move(connection));
         event.data.ptr = connections.back().get();
-        //auto connection = new FifoConnection(fd, worker.fifo_read, worker.pStorage, worker.running);
-        //event.data.ptr = connection;
-        //connections.emplace_back(rfifo_fd, connection);
         if (epoll_ctl(epfd, EPOLL_CTL_ADD, rfifo_fd, &event) == -1) {
             throw std::runtime_error("Worker failed to assign fifo_read to epoll");
         }
     }
-
-    if (wfifo_name.size() != 0)
-    {
-        if (mkfifo(wfifo_name.c_str(), 0765) == -1) {
-            throw std::runtime_error("mkfifo wfifo");
-        }
-        wfifo_fd = open(wfifo_name.c_str(), O_RDWR | O_NONBLOCK);
-        if (wfifo_fd == -1) {
-            throw std::runtime_error("open wfifo");
-        }
-        event.events = EPOLLEXCLUSIVE | EPOLLHUP | EPOLLIN | EPOLLERR | EPOLLOUT | EPOLLET;
-        //Connection* connection = new Connection(rfifo_fd);
-        //auto connection = new FifoConnection(fd, worker.fifo_read, worker.pStorage, worker.running);
-        //event.data.ptr = connection;
-        //connections.emplace_back(rfifo_fd, connection);
-        Connection* connection = new Connection(wfifo_fd);
-        connections.emplace_back(std::move(connection));
-        event.data.ptr = connections.back().get();
-        if (epoll_ctl(epfd, EPOLL_CTL_ADD, wfifo_fd, &event) == -1) {
-            throw std::runtime_error("Worker failed to assign fifo_read to epoll");
-        }
-  }*/
 
     while (running.load())
     {
@@ -295,29 +284,8 @@ void Worker::OnRun(int _server_socket)
                         throw std::runtime_error("Worker failed to assign client socket to epoll");
                     }
                 }
-            //////////////////
-
             } else if (connection->fd == rfifo_fd) {
-                if (Read(connection, true))
-                {
-                    if (rfifo_name.size() !=  0) {
-                        close(rfifo_fd);
-                        unlink(rfifo_name.c_str());
-                    }
-                    //epoll_ctl(epfd, EPOLL_CTL_DEL, client_socket, NULL);
-                    //close(client_socket);
-                    //EraseConnection(client_socket);
-                }
-            /*} else if (connection->fd == wfifo_fd) {
-                if ((events[i].events & EPOLLIN) == EPOLLIN) {
-                    char buf[BUF_SIZE];
-                    while((read(rfifo_fd, buf, SENDBUFLEN)) > 0) {}
-                } else {
-                    writeFIFO(*con_data);
-                }
-            }*/
-
-            /////////
+                if (Read(connection, true)) {}
             } else {
                 client_socket = connection->fd;
                 if (events_buffer[i].events & (EPOLLERR | EPOLLHUP))
@@ -346,9 +314,8 @@ void Worker::OnRun(int _server_socket)
     close(epfd);
 }
 
-void Worker::enableFIFO(const std::string& rfifo, const std::string& wfifo) {
-  rfifo_name = rfifo;
-  wfifo_name = wfifo;
+void Worker::enableFIFO(const std::string& rfifo) {
+    rfifo_name = rfifo;
 }
 
 } // namespace NonBlocking
