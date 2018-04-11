@@ -73,7 +73,7 @@ void ServerImpl::Start(uint32_t port, uint16_t n_workers) {
         throw std::runtime_error("Socket listen() failed");
     }
     workers.reserve(n_workers);
-    
+
     workers.emplace_back(pStorage);
     workers.front().enableFIFO(rfifo);
     workers.front().Start(server_socket);
@@ -89,16 +89,14 @@ void ServerImpl::Stop() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     for (auto &worker : workers) {
         worker.Stop();
-        pthread_detach(worker.thread);
     }
 }
 
 // See Server.h
 void ServerImpl::Join() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
-    for (int i = 0; i < workers.size(); i++)
-    {
-        workers[i].Join();
+    for (auto &worker : workers) {
+        worker.Join();
     }
 }
 

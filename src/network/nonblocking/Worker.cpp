@@ -64,7 +64,7 @@ void Worker::Stop() {
 // See Worker.h
 void Worker::Join() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
-    pthread_join(thread, NULL);
+    pthread_detach(thread);
 }
 
 bool Worker::Read(Connection* conn, bool fifo)
