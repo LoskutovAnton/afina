@@ -72,7 +72,8 @@ void ServerImpl::Start(uint32_t port, uint16_t n_workers) {
         close(server_socket);
         throw std::runtime_error("Socket listen() failed");
     }
-
+    workers.reserve(n_workers);
+    
     workers.emplace_back(pStorage);
     workers.front().enableFIFO(rfifo);
     workers.front().Start(server_socket);
