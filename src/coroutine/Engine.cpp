@@ -16,7 +16,11 @@ void Engine::Store(context &ctx) {
 
     if (diff > std::get<1>(ctx.Stack))
     {
-        std::get<0>(ctx.Stack) = std::move(new char[diff]);
+        if (std::get<0>(ctx.Stack) != nullptr)
+        {
+            delete []std::get<0>(ctx.Stack);
+        }
+        std::get<0>(ctx.Stack) = new char[diff];
         std::get<1>(ctx.Stack) = diff;
     }
 
