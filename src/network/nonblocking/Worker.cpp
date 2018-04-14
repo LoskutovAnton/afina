@@ -103,8 +103,7 @@ bool Worker::Read(Connection* conn, bool fifo)
                     }
                 }
             } catch (std::runtime_error &ex) {
-                std::cout << ex.what() << '\n';
-                conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
+                conn->write.push_back(std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n");
                 conn->read_str.clear();
                 conn->state = State::kWriting;
                 continue;
@@ -139,10 +138,12 @@ bool Worker::Read(Connection* conn, bool fifo)
                     conn->read_str.erase(0, 2);
                 }
                 try {
-                    command->Execute(*pStorage, str_command, conn->write_str);
-                    conn->write_str += "\r\n";
+                    std::string res;
+                    command->Execute(*pStorage, str_command, res);
+                    conn->write.push_back(res + "\r\n");
+
                 } catch (std::runtime_error &ex) {
-                    conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
+                    conn->write.push_back(std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n");
                     conn->read_str.clear();
                 }
                 parser.Reset();
@@ -154,19 +155,23 @@ bool Worker::Read(Connection* conn, bool fifo)
 
         if (conn->state == State::kWriting)
         {
-            size_t new_chunk_size = 0;
             int writed = 1;
-            while (new_chunk_size < CHUNK_SIZE)
+            while (conn->write.size() > 0)
             {
                 if (!fifo) {
-                    writed = write(write_socket, conn->write_str.c_str(), conn->write_str.size());
+                    std::string tmp = conn->write.front();
+                    writed = write(write_socket, tmp.c_str() + conn->head_writed, tmp.size() - conn->head_writed);
                 } else {
                     writed = 0;
-                    conn->write_str.clear();
+                    conn->write.clear();
                 }
                 if (writed > 0) {
-                    new_chunk_size += writed;
-                    conn->write_str.erase(0, writed);
+                    if (conn->write.front().size() < writed) {
+                        conn->head_writed += writed;
+                    } else {
+                        conn->write.pop_front();
+                        conn->head_writed = 0;
+                    }
                 } else {
                     break;
                 }
@@ -179,7 +184,7 @@ bool Worker::Read(Connection* conn, bool fifo)
                 }
             }
 
-            if (conn->write_str.size() == 0)
+            if (conn->write.size() == 0)
             {
                 conn->state = State::kReading;
                 if (conn->read_str.size() == 0)
@@ -248,7 +253,7 @@ void Worker::OnRun(int _server_socket)
         if (rfifo_fd == -1) {
             throw std::runtime_error("open wfifo");
         }
-        event.events = EPOLLEXCLUSIVE | EPOLLHUP | EPOLLIN | EPOLLERR | EPOLLET;
+        event.events = /*EPOLLEXCLUSIVE | */EPOLLHUP | EPOLLIN | EPOLLERR;// | EPOLLET;
         Connection* connection = new Connection(rfifo_fd);
         connections.emplace_back(std::move(connection));
         event.data.ptr = connections.back().get();

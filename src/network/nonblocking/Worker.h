@@ -7,6 +7,7 @@
 #include <vector>
 #include <string>
 #include <unistd.h>
+#include <deque>
 
 namespace Afina {
 
@@ -23,16 +24,17 @@ enum class State {
 };
 
 struct Connection {
-    Connection(int _fd) : fd(_fd), state(State::kReading) {
+    Connection(int _fd) : fd(_fd), state(State::kReading), head_writed(0) {
         read_str.clear();
-        write_str.clear();
+        write.clear();
     }
     ~Connection(void) {
         close(fd);
     }
     int fd;
     std::string read_str;
-    std::string write_str;
+    std::deque<std::string> write;
+    size_t head_writed;
     State state;
 };
 
@@ -97,7 +99,6 @@ private:
 
     const size_t BUF_SIZE = 1024;
     const size_t EPOLL_MAX_EVENTS = 10;
-    const size_t CHUNK_SIZE = 128;
 };
 
 } // namespace NonBlocking
