@@ -40,7 +40,7 @@ void* Worker::OnRunProxy(void* _args) {
     Worker* worker = args->first;
     int server_socket = args->second;
     worker->OnRun(server_socket);
-    return NULL;
+    return 0;
 }
 
 // See Worker.h
@@ -49,7 +49,8 @@ void Worker::Start(int _server_socket) {
     server_socket = _server_socket;
     running.store(true);
     auto args = new OnRunProxyArgs(this, server_socket);
-    if (pthread_create(&thread, NULL, Afina::Network::NonBlocking::Worker::OnRunProxy, args) < 0) {
+    pthread_t buffer;
+    if (pthread_create(&buffer, NULL, Afina::Network::NonBlocking::Worker::OnRunProxy, args) < 0) {
         throw std::runtime_error("Could not create worker thread");
     }
 }
@@ -58,13 +59,13 @@ void Worker::Start(int _server_socket) {
 void Worker::Stop() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
     running.store(false);
-    shutdown(server_socket, SHUT_RDWR);
 }
 
 // See Worker.h
 void Worker::Join() {
     std::cout << "network debug: " << __PRETTY_FUNCTION__ << std::endl;
-    pthread_detach(thread);
+    shutdown(server_socket, SHUT_RDWR);
+    pthread_join(thread, NULL);
 }
 
 bool Worker::Read(Connection* conn, bool fifo)
@@ -90,8 +91,8 @@ bool Worker::Read(Connection* conn, bool fifo)
             {
                 while (!parser.Parse(conn->read_str, parsed))
                 {
-                    buf_readed = read(read_socket, buf, BUF_SIZE);
                     isParsed = false;
+                    buf_readed = read(read_socket, buf, BUF_SIZE);
                     if (buf_readed > 0)
                     {
                         conn->read_str.append(buf, buf_readed);
@@ -102,6 +103,7 @@ bool Worker::Read(Connection* conn, bool fifo)
                     }
                 }
             } catch (std::runtime_error &ex) {
+                std::cout << ex.what() << '\n';
                 conn->write_str = std::string("WORKER_CONNECTION_ERROR ") + ex.what() + "\r\n";
                 conn->read_str.clear();
                 conn->state = State::kWriting;
@@ -182,13 +184,12 @@ bool Worker::Read(Connection* conn, bool fifo)
                 conn->state = State::kReading;
                 if (conn->read_str.size() == 0)
                 {
-                    return true;
+                    return false;
                 }
             }
         }
     }
-
-    return true;
+    return false;
 }
 
 void Worker::EraseConnection(int client_socket)
@@ -240,6 +241,7 @@ void Worker::OnRun(int _server_socket)
     if (rfifo_name.size() != 0)
     {
         if (mkfifo(rfifo_name.c_str(), 0765) == -1) {
+            std::cout << rfifo_name << '\n';
             throw std::runtime_error("mkfifo wfifo");
         }
         rfifo_fd = open(rfifo_name.c_str(), O_RDONLY | O_NONBLOCK);
@@ -273,10 +275,15 @@ void Worker::OnRun(int _server_socket)
                 if (client_socket == -1) {
                     if ((errno != EWOULDBLOCK) && (errno != EAGAIN)) {
                         close(server_socket);
+                        epoll_ctl(epfd, EPOLL_CTL_DEL, server_socket, NULL);
+                        if (running.load())
+                        {
+                            throw std::runtime_error("Worker failed to accept()");
+                        }
                     }
                 } else {
                     make_socket_non_blocking(client_socket);
-                    event.events = EPOLLIN | EPOLLHUP | EPOLLERR;
+                    event.events = EPOLLIN | EPOLLOUT | EPOLLHUP | EPOLLERR;
                     auto connection = new Connection(client_socket);
                     connections.emplace_back(std::move(connection));
                     event.data.ptr = connections.back().get();
@@ -285,18 +292,21 @@ void Worker::OnRun(int _server_socket)
                     }
                 }
             } else if (connection->fd == rfifo_fd) {
-                if (Read(connection, true)) {}
+                if (!Read(connection, true))
+                {
+                    epoll_ctl(epfd, EPOLL_CTL_DEL, client_socket, NULL);
+                    EraseConnection(client_socket);
+                }
             } else {
                 client_socket = connection->fd;
                 if (events_buffer[i].events & (EPOLLERR | EPOLLHUP))
                 {
                     epoll_ctl(epfd, EPOLL_CTL_DEL, client_socket, NULL);
                     EraseConnection(client_socket);
-                } else if (events_buffer[i].events & EPOLLIN) {
-                    if (Read(connection, false))
+                } else if (events_buffer[i].events & (EPOLLIN | EPOLLOUT)) {
+                    if (!Read(connection, false))
                     {
                         epoll_ctl(epfd, EPOLL_CTL_DEL, client_socket, NULL);
-                        close(client_socket);
                         EraseConnection(client_socket);
                     }
                 } else {

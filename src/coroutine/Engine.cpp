@@ -12,14 +12,16 @@ void Engine::Store(context &ctx) {
 
     ctx.Low = &StackPosHere;
     ctx.Hight = StackBottom;
+    if (ctx.Hight < ctx.Low)
+    {
+        ctx.Low = StackBottom;
+        ctx.Hight = &StackPosHere;
+    }
     size_t diff = ctx.Hight - ctx.Low;
 
     if (diff > std::get<1>(ctx.Stack))
     {
-        if (std::get<0>(ctx.Stack) != nullptr)
-        {
-            delete []std::get<0>(ctx.Stack);
-        }
+        delete []std::get<0>(ctx.Stack);
         std::get<0>(ctx.Stack) = new char[diff];
         std::get<1>(ctx.Stack) = diff;
     }
@@ -29,8 +31,8 @@ void Engine::Store(context &ctx) {
 
 void Engine::Restore(context &ctx) {
     char StackPosHere;
-    if (&StackPosHere >= ctx.Low) {
-    	Restore(ctx);
+    if(&StackPosHere >= ctx.Low && &StackPosHere <= ctx.Hight){
+        Restore(ctx);
     }
 
     memcpy(ctx.Low, std::get<0>(ctx.Stack), std::get<1>(ctx.Stack));
@@ -43,6 +45,8 @@ void Engine::yield() {
         if (new_routine != nullptr)
         {
             new_routine = new_routine->next;
+        } else {
+            return;
         }
     }
 

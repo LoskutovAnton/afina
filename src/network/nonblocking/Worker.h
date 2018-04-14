@@ -6,6 +6,7 @@
 #include <pthread.h>
 #include <vector>
 #include <string>
+#include <unistd.h>
 
 namespace Afina {
 
@@ -25,13 +26,10 @@ struct Connection {
     Connection(int _fd) : fd(_fd), state(State::kReading) {
         read_str.clear();
         write_str.clear();
-        //rfifo_name.clear();
     }
-    //Connection(int _rfifo_fd, std::string _name) : rfifo_fd(_rfifo_fd), rfifo_name(_name)
-    //{
-    //    str_buf.clear();
-    //}
-    ~Connection(void) {}
+    ~Connection(void) {
+        close(fd);
+    }
     int fd;
     std::string read_str;
     std::string write_str;
