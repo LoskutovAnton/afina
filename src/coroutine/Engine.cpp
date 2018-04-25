@@ -3,6 +3,7 @@
 #include <setjmp.h>
 #include <stdio.h>
 #include <string.h>
+#include <cassert>
 
 namespace Afina {
 namespace Coroutine {
@@ -10,13 +11,14 @@ namespace Coroutine {
 void Engine::Store(context &ctx) {
     char StackPosHere;
 
-    ctx.Low = &StackPosHere;
-    ctx.Hight = StackBottom;
-    if (ctx.Hight < ctx.Low)
+    ctx.Low = ctx.Hight = &StackPosHere;
+    if (StackBottom < &StackPosHere)
     {
         ctx.Low = StackBottom;
-        ctx.Hight = &StackPosHere;
+    } else {
+        ctx.Hight = StackBottom;
     }
+
     size_t diff = ctx.Hight - ctx.Low;
 
     if (diff > std::get<1>(ctx.Stack))
@@ -41,17 +43,13 @@ void Engine::Restore(context &ctx) {
 
 void Engine::yield() {
     context *new_routine = alive;
-    if (new_routine == cur_routine) {
-        if (new_routine != nullptr)
-        {
-            new_routine = new_routine->next;
-        } else {
-            return;
-        }
-    }
 
     if (new_routine == nullptr) {
-    	return;
+        return;
+    }
+
+    if (new_routine == cur_routine) {
+        new_routine = new_routine->next;
     }
 
     sched(new_routine);
@@ -59,6 +57,11 @@ void Engine::yield() {
 
 void Engine::sched(void *routine_) {
     context *ctx = (context*) routine_;
+
+    if (cur_routine == ctx)
+    {
+        return;
+    }
 
     if (cur_routine != nullptr) {
     	if (setjmp(cur_routine->Environment) == 1) {

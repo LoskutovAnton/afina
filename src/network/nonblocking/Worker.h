@@ -8,6 +8,7 @@
 #include <string>
 #include <unistd.h>
 #include <deque>
+#include "../../protocol/Parser.h"
 
 namespace Afina {
 
@@ -24,9 +25,10 @@ enum class State {
 };
 
 struct Connection {
-    Connection(int _fd) : fd(_fd), state(State::kReading), head_writed(0) {
+    Connection(int _fd) : fd(_fd), state(State::kReading), head_writed(0), offset(0) {
         read_str.clear();
         write.clear();
+        parser.Reset();
     }
     ~Connection(void) {
         close(fd);
@@ -34,8 +36,9 @@ struct Connection {
     int fd;
     std::string read_str;
     std::deque<std::string> write;
-    size_t head_writed;
+    size_t head_writed, offset;
     State state;
+    Protocol::Parser parser;
 };
 
 /**
