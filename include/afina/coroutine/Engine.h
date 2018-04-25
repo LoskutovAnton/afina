@@ -124,14 +124,8 @@ public:
             yield();
         } else if (pc != nullptr) {
             Store(*idle_ctx);
-            if (cur_routine == nullptr)
-            {
-                cur_routine = (context*) pc;
-                Restore(*cur_routine);
-            } else {
-                sched(pc);
-            }
-
+            cur_routine = (context*) pc;
+            Restore(*cur_routine);
         }
 
         // Shutdown runtime
