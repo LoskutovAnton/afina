@@ -120,10 +120,18 @@ public:
 
         if (setjmp(idle_ctx->Environment) > 0) {
             // Here: correct finish of the coroutine section
+            cur_routine = new context();
             yield();
         } else if (pc != nullptr) {
             Store(*idle_ctx);
-            sched(pc);
+            if (cur_routine == nullptr)
+            {
+                cur_routine = (context*) pc;
+                Restore(*cur_routine);
+            } else {
+                sched(pc);
+            }
+
         }
 
         // Shutdown runtime

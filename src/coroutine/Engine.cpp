@@ -63,12 +63,10 @@ void Engine::sched(void *routine_) {
         return;
     }
 
-    if (cur_routine != nullptr) {
-    	if (setjmp(cur_routine->Environment) == 1) {
-    		return;
-    	}
-    	Store(*cur_routine);
+    if (setjmp(cur_routine->Environment) == 1) {
+    	return;
     }
+    Store(*cur_routine);
 
     cur_routine = ctx;
     Restore(*cur_routine);
