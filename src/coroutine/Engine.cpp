@@ -58,8 +58,7 @@ void Engine::yield() {
 void Engine::sched(void *routine_) {
     context *ctx = (context*) routine_;
 
-    if (cur_routine == ctx)
-    {
+    if (cur_routine == ctx) {
         return;
     }
 
@@ -68,6 +67,10 @@ void Engine::sched(void *routine_) {
     }
     Store(*cur_routine);
 
+    restoreNext(ctx);
+}
+
+void Engine::restoreNext(context *ctx) {
     cur_routine = ctx;
     Restore(*cur_routine);
 }

@@ -111,6 +111,8 @@ bool Worker::Read(Connection* conn, bool fifo)
                 if (conn->parser.Parse(&conn->read_str[conn->offset], parsed))
                 {
                     conn->state = State::kBuilding;
+                } else {
+                    std::cout << "parsed: " << parsed << '\n';
                 }
                 conn->offset += parsed;
             } catch (std::runtime_error &ex) {

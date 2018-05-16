@@ -71,6 +71,11 @@ protected:
     void Restore(context &ctx);
 
     /**
+     * Restore stack of the next alive context and pass control to coroutinne
+     */
+    void restoreNext(context *ctx);
+
+    /**
      * Suspend current coroutine execution and execute given context
      */
     // void Enter(context& ctx);
@@ -120,8 +125,11 @@ public:
 
         if (setjmp(idle_ctx->Environment) > 0) {
             // Here: correct finish of the coroutine section
-            cur_routine = new context();
-            yield();
+            if (alive != nullptr) {
+                restoreNext(alive);
+            } else {
+                yield();
+            }
         } else if (pc != nullptr) {
             Store(*idle_ctx);
             cur_routine = (context*) pc;
