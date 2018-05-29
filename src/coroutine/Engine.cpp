@@ -2,7 +2,7 @@
 
 #include <setjmp.h>
 #include <stdio.h>
-#include <string.h>
+#include <cstring>
 #include <cassert>
 
 namespace Afina {

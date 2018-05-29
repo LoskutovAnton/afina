@@ -59,6 +59,8 @@ private:
      */
     context *idle_ctx;
 
+    context *clear_ctx;
+
 protected:
     /**
      * Save stack of the current coroutine in the given context
@@ -81,7 +83,7 @@ protected:
     // void Enter(context& ctx);
 
 public:
-    Engine() : StackBottom(0), cur_routine(nullptr), alive(nullptr) {}
+    Engine() : StackBottom(0), cur_routine(nullptr), alive(nullptr), clear_ctx(new context()) {}
     Engine(Engine &&) = delete;
     Engine(const Engine &) = delete;
 
@@ -125,11 +127,8 @@ public:
 
         if (setjmp(idle_ctx->Environment) > 0) {
             // Here: correct finish of the coroutine section
-            if (alive != nullptr) {
-                restoreNext(alive);
-            } else {
-                yield();
-            }
+            cur_routine = clear_ctx;
+            yield();
         } else if (pc != nullptr) {
             Store(*idle_ctx);
             cur_routine = (context*) pc;
@@ -139,6 +138,7 @@ public:
         // Shutdown runtime
         delete []std::get<0>(idle_ctx->Stack);
         delete idle_ctx;
+        delete clear_ctx;
         this->StackBottom = 0;
     }
 
